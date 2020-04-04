@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>Online store</title>
+</head>
+<body>
+	<nav>
+		<a href = "Home.html">Интернет-магазин</a>
+		<a href = "Login.html">Войти</a>
+	</nav>
+	<h1>Мобильные телефоны</h1>
+	<div class="">
+		<form action="http://OnlineStore/filter" method="post">
+			<b>Цена, б.р.</b><br>
+			<input type="text" name="fromPrice" placeholder="от">
+			<input type="text" name="toPrice" placeholder="до"><br><br>
+			<details>
+				<summary><b>Производитель<b></summary>
+					<input type="checkbox" name="producer" 
+					value="Samsung">Samsung<br>
+					<input type="checkbox" name="producer"
+					value="Xiaomi">Xiaomi<br>
+					<input type="checkbox" name="producer"
+					value="Huawei">Huawei<br>
+					<input type="checkbox" name="producer"
+					value="Apple">Apple<br>
+					<input type="checkbox" name="producer"
+					value="Nokia">Nokia<br>				
+			</details><br>		
+			<details>				
+				<summary><b>Платформа<b></summary>
+					<input type="checkbox" name="platform" 
+					value="iOS">iOS<br>
+					<input type="checkbox" name="platform"
+					value="Android">Android<br>
+					<input type="checkbox" name="platform"
+					value="Windows Phone">Windows Phone<br>									
+			</details><br>
+			<details>				
+				<summary><b>Количество SIM-карт<b></summary>
+					<input type="number" name="simCards" 
+					min="1" max="4"><br>												
+			</details><br>	
+			<details>				
+				<summary><b>Оперативная память<b></summary>
+					<input type="checkbox" name="RAM" 
+					value="12">12 Гб<br>
+					<input type="checkbox" name="RAM" 
+					value="10">10 Гб<br>
+					<input type="checkbox" name="RAM" 
+					value="8">8 Гб<br>
+					<input type="checkbox" name="RAM" 
+					value="6">6 Гб<br>
+					<input type="checkbox" name="RAM" 
+					value="4">4 Гб<br>									
+			</details><br>
+			<details>				
+				<summary><b>Встроенная память<b></summary>
+					<input type="checkbox" name="builtInMemory" 
+					value="1000">1 Tб<br>
+					<input type="checkbox" name="builtInMemory" 
+					value="512">512 Гб<br>
+					<input type="checkbox" name="builtInMemory" 
+					value="256">256 Гб<br>
+					<input type="checkbox" name="builtInMemory" 
+					value="128">128 Гб<br>
+					<input type="checkbox" name="builtInMemory" 
+					value="64">64 Гб<br>									
+			</details><br>
+			<details>				
+				<summary><b>Диагональ экрана<b></summary>					
+					<input type="text" name="fromDiagonal" placeholder="от">
+					<input type="text" name="toDiagonal" placeholder="до"><br><br>								
+			</details><br>
+			<details>				
+				<summary><b>Аккумулятор<b></summary>
+					<input type="radio" name="battery" 
+					value="noMatter" checked >Не важно<br>
+					<input type="radio" name="battery" 
+					value="nonRemovable">Несъемный<br>
+					<input type="radio" name="battery" 
+					value="removable">Съёмный<br>									
+			</details><br>
+			<input type="submit" name="searchPhones" value="Найти телефоны">
+		</form>
+	</div>
+	<div class="ModelList">
+		<ul type="square">
+			<li value="mobileName">
+				<figure>
+					<a href="MobileDescription.html">Mobile.Name</a><br><br>
+					<img src="Photo.jpeg" height="200">
+					<p>
+						<small>Производитель&nbsp&nbsp&nbspMobile.Producer</small><br>
+						<small>Платформа&nbsp&nbsp&nbspMobile.Platform</small><br>
+						<small>Количество SIM-карт&nbsp&nbsp&nbspMobile.SimCardsNumber</small><br>
+						<small>Оперативная память&nbsp&nbsp&nbspMobile.RAM</small><br>
+						<small>Встроенная память&nbsp&nbsp&nbspMobile.Diagonal</small><br>
+						<small>Диагональ экрана&nbsp&nbsp&nbspMobile.Battery</small><br>
+					</p>
+					<p>Moble.Price</p><br>
+					<input type="button" name="toBasket" value="В корзину">
+				</figure>
+			<li>
+		</ul>
+	</div>
+</body>
+</html>
