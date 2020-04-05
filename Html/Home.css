@@ -1,0 +1,159 @@
+body{
+	background-color: #eee8aa
+}
+
+h1{
+	color: #a52a2a
+}
+
+.menu {
+	background: #262626;		
+	height: 40px;
+	border-radius: 7px;		
+}
+
+
+ul.menu a {		
+	display: flex;
+	color: #ffa500;			
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px 10px;
+}
+
+ul.menu a: hover {
+	color: #ffffff;
+}
+
+ul.menu li {	
+	list-style-type: none; 
+	display: inline-flex;	
+}
+
+ul.menu li:last-child {
+	padding-right: 25px;
+	float: right;
+}
+
+.flex-container{
+	display: flex;
+}
+
+.filter-phones{
+	background-color: #D3D3D3;
+	border-radius: 10px;
+	width: 250px;
+	display: flex;
+	justify-content: center;
+}
+
+.model-list li{
+	list-style-type: none;	
+	border-left-width: 0px;
+	border-right-width: 0px;
+	border-top: 0.1px;
+	border-bottom: 0.1px;
+	border-color: black;
+	border-style: solid;
+	border-color: #808080;
+}
+
+.filter-block {
+	padding: 10px;
+}
+
+#from, #to{
+	width: 90px;
+	height: 22px;
+	font-size: 15px;
+}
+
+#simCards{
+	width: 45px;	
+	height: 22px;
+	font-size: 15px;
+}
+
+.phone-element{
+	display: flex;
+}
+
+.phone-detail{
+	word-wrap: break-word;
+	width: 450px;
+}
+
+.photo-and-button {
+	display: block;	
+	padding-right: 30px;
+}
+
+#mobileName {
+	text-decoration: none;
+	color: #1e90ff;
+	font-size: 20px;
+}
+
+#searchPhones {
+	background-color: #ff8c00;
+	color: #ffffff;
+	border-width: 0px;
+	width: 180px;
+	height: 30px;
+	border-radius: 7px;
+}
+
+.result-tools {
+	padding-left: 30px;
+	display: flex;
+	flex-direction: column;
+}
+
+#toBasket {
+	background-color: #3caf50;
+	color: #ffffff;
+	border-radius: 7px;
+	border-width: 0;
+	height: 30px;
+	width: 150px;
+	font-size: 16px;
+}
+
+#price {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+[name="inStock"] {
+	background-image: url(inStock.png);
+	background-size: 25px;
+	background-repeat: no-repeat;
+	font-weight: normal;
+	font-size: 20px;
+	padding-left: 30px;	
+	margin-bottom: 30px;
+}
+
+[name="notAvailable"] {	
+	font-weight: normal;
+	color: #ff0000;
+	display: none;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.result_attrs {
+	overflow: hidden;
+	margin-top: 30px;
+	width: 100%;
+	
+}
+
+.result_attrs td {
+	font-weight: normal;
+	font-size: 15px;
+	padding: 5px;	
+	width: 200px;	
+}
+
