@@ -1,10 +1,115 @@
 body{
-	background-color: #eee8aa
+	background-color: #eee8aa;	
 }
 
-h1{
+body > h1{
 	color: #a52a2a
 }
+
+#blackout {
+	background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;    
+}
+
+#blackout:target {
+	display: block;		
+}
+
+.close-icon {
+	position: absolute;
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	top: 0px;
+	right: 0px;	
+	background: url("close.png") no-repeat;
+	background-size: 25px;
+}
+
+#login {
+	width: 370px;
+	height: 335px;
+	text-align: center;	
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background-color: #ffffff;
+	border: 3px solid #ffffff;
+    border-radius: 10px;         
+}
+
+#login form{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;	
+	align-items: center;		
+}
+
+#login a {
+	text-decoration: none;
+	color: #0077cc;
+	font-size: 15px;	
+}
+
+#login form > a {
+	margin-top: 10px;
+}
+
+#login a:hover {
+	color: #dc133c;
+}
+
+#resetPassword, #registration {
+	width: 370px;
+	height: 200px;
+	text-align: center;	
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background-color: #ffffff;
+	border: 3px solid #ffffff;
+    border-radius: 10px;
+    display: none;
+}
+
+#resetPassword:target, #registration:target {
+	display: block;
+}
+
+[type="email"], [type="password"] {
+	margin: 5px;
+	width: 300px;
+	height: 30px;
+	font-size: 14px;
+}
+
+#login_button, #buttonForReset, #buttonForRegistration  {
+	background-color: #0077cc;
+	color: #ffffff;
+	border-width: 0px;
+	width: 120px;
+	height: 45px;
+	border-radius: 7px;
+	font-weight: bold;
+	font-size: 13px;
+	cursor: pointer;
+	margin-bottom: 10px;
+	margin-top: 15px;
+}
+
+
 
 .menu {
 	background: #262626;		
@@ -23,7 +128,7 @@ ul.menu a {
 }
 
 ul.menu a: hover {
-	color: #ffffff;
+	color: #ffffff;	
 }
 
 ul.menu li {	
@@ -84,6 +189,10 @@ ul.menu li:last-child {
 	width: 450px;
 }
 
+#phonePhoto {
+	border-radius: 15px;	
+}
+
 .photo-and-button {
 	display: block;	
 	padding-right: 30px;
@@ -102,6 +211,7 @@ ul.menu li:last-child {
 	width: 180px;
 	height: 30px;
 	border-radius: 7px;
+	cursor: pointer;
 }
 
 .result-tools {
@@ -118,6 +228,7 @@ ul.menu li:last-child {
 	height: 30px;
 	width: 150px;
 	font-size: 16px;
+	cursor: pointer;
 }
 
 #price {

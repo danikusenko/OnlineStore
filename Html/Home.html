@@ -4,10 +4,40 @@
 	<title>Online store</title>
 	<link rel="stylesheet" href="Home.css">
 </head>
-<body>	
+<body>
+	<div id=blackout>	
+		<div id=login>
+			<h1>Вход</h1>
+			<form action="http://OnlineStore/Login" method="post" >				
+				<input id=email type="email" name="email" placeholder="Адрес электронной почты">
+				<input id=password type="password" name="password" placeholder="Пароль" maxlength="16">
+				<input id=login_button type="submit" name="login" value="Войти">
+				<a href="#resetPassword">Не помню пароль</a>			
+				<a href="#registration" name="registration">Регистрация</a>											
+			</form>		
+			<a class="close-icon" href="#"></a>		
+		</div>
+		<div id=resetPassword>
+			<h1>Сброс пароля</h1>
+			<form action="http://OnlineStore/ResetPassword" method="post">
+				<input id="emailForReset" type="email" name="emailForReset" placeholder="Адрес электронной почты">
+				<input id=buttonForReset type="submit" name="buttonForReset" value="Продолжить">
+			</form>			
+			<a class="close-icon" href="#"></a>
+		</div>
+		<div id=registration>
+			<h1>Регистрация</h1>
+				<form action="http://OnlineStore/Registration" method="post">
+					<input id="emailForRegistration" type="email" name="emailForRegistration" 
+					placeholder="Адрес электронной почты">
+					<input id=buttonForRegistration type="submit" name="buttonForRegistration" value="Продолжить">
+				</form>
+				<a class="close-icon" href="#"></a>
+		</div>
+	</div>	
 	<ul class="menu">
 		<li><a href = "Home.html">Интернет-магазин</a></li>
-		<li><a href = "Login.html">Войти</a></li>
+		<li><a href = "#blackout">Войти</a></li>
 	</ul>
 	<h1>Мобильные телефоны</h1>
 	<div class="flex-container">
@@ -94,7 +124,7 @@
 					<figure>
 						<div class="phone-element">
 							<div class="photo-and-button">
-								<img src="Photo.jpeg" height="220">								
+								<img id=phonePhoto src="Photo.jpeg" height="220">								
 							</div>
 							<div class="phone-detail">
 								<a id=mobileName href="MobileDescription.html">Mobile.Name</a>									
