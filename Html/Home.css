@@ -124,7 +124,7 @@ ul.menu a {
 	text-decoration: none;
 	font-size: 18px;
 	text-align: center;
-	padding: 10px 10px;
+	padding: 10px 15px;
 }
 
 ul.menu a: hover {
@@ -136,9 +136,13 @@ ul.menu li {
 	display: inline-flex;	
 }
 
-ul.menu li:last-child {
-	padding-right: 25px;
+ul.menu li:last-child  {	
 	float: right;
+}
+
+ul.menu li:nth-last-child(2) {
+	float: right;
+	padding-right: 25px;	
 }
 
 .flex-container{
@@ -146,7 +150,7 @@ ul.menu li:last-child {
 }
 
 .filter-phones{
-	background-color: #D3D3D3;
+	background-color: #d3d3d3;
 	border-radius: 10px;
 	width: 250px;
 	display: flex;
@@ -193,7 +197,7 @@ ul.menu li:last-child {
 	border-radius: 15px;	
 }
 
-.photo-and-button {
+.photo {
 	display: block;	
 	padding-right: 30px;
 }
