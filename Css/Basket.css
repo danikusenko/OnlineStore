@@ -84,6 +84,10 @@ ul.menu li:nth-last-child(2) {
 	text-decoration: none;
 }
 
+#phonePhoto {
+	border-radius: 5px;
+}
+
 #count {
 	width: 40px;
 	height: 30px;

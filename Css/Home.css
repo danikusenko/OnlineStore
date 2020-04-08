@@ -27,7 +27,7 @@ body > h1{
 	height: 25px;
 	top: 0px;
 	right: 0px;	
-	background: url("close.png") no-repeat;
+	background: url("../Images/close.png") no-repeat;
 	background-size: 25px;
 }
 
@@ -241,7 +241,7 @@ ul.menu li:nth-last-child(2) {
 }
 
 [name="inStock"] {
-	background-image: url(inStock.png);
+	background-image: url(../Images/inStock.png);
 	background-size: 25px;
 	background-repeat: no-repeat;
 	font-weight: normal;

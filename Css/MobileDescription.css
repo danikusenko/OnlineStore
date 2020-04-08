@@ -21,7 +21,7 @@ ul.menu a {
 	text-decoration: none;
 	font-size: 18px;
 	text-align: center;
-	padding: 10px 10px;
+	padding: 10px 15px;
 }
 
 ul.menu a: hover {
@@ -33,9 +33,13 @@ ul.menu li {
 	display: inline-flex;	
 }
 
-ul.menu li:last-child {
-	padding-right: 25px;
+ul.menu li:last-child  {	
 	float: right;
+}
+
+ul.menu li:nth-last-child(2) {
+	float: right;
+	padding-right: 25px;	
 }
 
 #phonePhoto {
@@ -104,7 +108,7 @@ ul.menu li:last-child {
 }
 
 [name="inStock"] {
-	background-image: url(inStock.png);
+	background-image: url(../Images/inStock.png);
 	background-size: 19px;
 	background-repeat: no-repeat;
 	font-weight: normal;
