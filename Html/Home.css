@@ -158,14 +158,14 @@ ul.menu li:nth-last-child(2) {
 }
 
 .model-list li{
-	list-style-type: none;	
-	border-left-width: 0px;
-	border-right-width: 0px;
-	border-top: 0.1px;
-	border-bottom: 0.1px;
-	border-color: black;
-	border-style: solid;
+	list-style-type: none;		
+	border-width: 0px 0px 0.1px;
+	border-style: solid;	
 	border-color: #808080;
+}
+
+.model-list li:first-child{		
+	border-top-width: 0.1px;	
 }
 
 .filter-block {

@@ -5,32 +5,57 @@
 	<link rel="stylesheet" href="Basket.css">
 </head>
 <body>
+	<ul class="menu">
+		<li><a href = "Home.html">Интернет-магазин</a></li>
+		<li><a href = "">Выход</a></li>
+		<li><a href="Basket.html">Корзина</a></li>		
+	</ul>
 	<h1>Оформление заказа</h1>
 	<h2>Список товаров</h2>
 	<div class="phones-in-basket">
 		<table>
+			<th>
+				<input type="checkbox" name="choose_phone" 
+							value="true">
+			</th>
 			<th>Мобильный телефон</th>
 			<th>Количество</th>
+			<th>Доставка</th>
 			<th>Cтоимость</th>
 			<tr>
 				<td>
-					<div class="name-and-photo"></div>
+					<input type="checkbox" name="choose_phone" 
+							value="true">
 				</td>
 				<td>
-					<input id=simCards type="number" name="simCards" 
+					<div class="name-and-photo">						
+						<img id=phonePhoto src="Photo.jpeg" height="80">
+						<a id=phoneName href="MobileDescription.html">Mobile.Name</a>
+					</div>
+				</td>
+				<td>
+					<input id=count type="number" name="count" 
 							min="0" value="1">
 				</td>
 				<td>
-					<span id=price>Mobile.Price</span>
+					<span >Курьером: </span>
+					<span>завтра</span>
+				</td>
+				<td>
+					<span id=price>Mobile.Price&nbsp;р.</span>
 				</td>
 			<tr>
 		</table>		
-	</div>
+	</div>	
 	<div class="basket-footer">
-		<span>Общая стоимость: </span>
-		<span id=totalCost>totalCost</span>
-		<input id=checkoutButton type="submit">Оформить заказ</div>
-		<a href="Home.html">Вернуться к покупкам</a>
-	</div>
+		<a id=goBack href="Home.html">Вернуться на главную</a>
+		<div class="cost-and-checkout">
+			<div>
+				<span>Общая стоимость:&nbsp;</span>
+				<span id=totalCost>totalCost&nbsp;р.</span>
+			</div>
+			<input id=checkoutButton type="submit" value="Оформить заказ">	
+		</div>	
+	</div>				
 </body>
 </html>
