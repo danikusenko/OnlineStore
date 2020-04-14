@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+	background-color: #eee8aa;
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	color: #1e90ff;	
+	padding-left: 40px;
+	word-wrap: break-word;
+}
+
+.menu {
+	background: #262626;		
+	height: 40px;
+	border-radius: 7px;		
+}
+
+
+ul.menu a {		
+	display: flex;
+	color: #ffa500;			
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px 15px;
+}
+
+ul.menu a:hover {
+	color: #ff80af;	
+}
+
+ul.menu li {	
+	list-style-type: none; 
+	display: inline-flex;	
+}
+
+.enter-and-basket {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+
+#phonePhoto {
+	margin-left: 50px;
+	border-radius: 27px;	
+}
+
+.phone-container {
+	display: flex;	
+}
+
+.phone-photo {
+	width: 35%;
+}
+
+.phone-detail {
+	width: 75%;
+}
+
+.price-and-available {
+	display: flex;
+	flex-direction: column;
+	margin-right: 50px;
+}
+
+.result-tools {
+	display: flex;
+	flex-direction: row;	
+}
+
+.phone-characteristics {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: 50% 50%;	
+}
+
+.phone-characteristics table {	
+	margin-bottom: 20px;
+	width: 100%;		
+	word-wrap: break-word;
+}
+
+.phone-characteristics table th {
+	text-align: justify;
+	font-size: 17px;		
+}
+
+.phone-characteristics table td {
+	width: 210px;		
+}
+
+#toBasket {
+	background-color: #42b857;
+	color: #ffffff;
+	border-radius: 7px;
+	border-width: 0;
+	height: 30px;
+	width: 150px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#toBasket:hover {
+	background-color: #308a40;	
+}
+
+#price {
+	font-size: 25px;
+	font-weight: bold;	
+}
+
+[name="inStock"] {
+	background-image: url(../Images/inStock.png);
+	background-size: 19px;
+	background-repeat: no-repeat;
+	font-weight: normal;
+	font-size: 15px;
+	padding-left: 22px;		
+}
+
+[name="notAvailable"] {	
+	font-weight: normal;
+	color: #ff0000;
+	display: none;
+	font-size: 15px;	
+}

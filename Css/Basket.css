@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+	background-color: #eee8aa;	
+	font-family: 'Roboto', sans-serif;
+}
+
+h1{
+	color: #a52a2a;	
+}
+
+h2{
+	margin-bottom: 5px;
+}
+
+.menu {
+	background: #262626;		
+	height: 40px;
+	border-radius: 7px;		
+}
+
+
+ul.menu a {		
+	display: flex;
+	color: #ffa500;			
+	text-decoration: none;
+	font-size: 18px;
+	text-align: center;
+	padding: 10px 15px;
+}
+
+ul.menu a:hover {
+	color: #ff80af;		
+}
+
+ul.menu li {	
+	list-style-type: none; 
+	display: inline-flex;	
+}
+
+.exit-and-basket {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);	
+	cursor: pointer;
+}
+
+.phones-in-basket  {	
+	border-top: 1px solid;			
+}
+
+.phones-in-basket table {
+	width: 100%;	
+	text-align: center;	
+	margin-top: 30px;			
+	border-bottom: 1px dotted grey;
+}
+
+
+.phones-in-basket table th{		
+	border-bottom: 1px dotted grey;	
+	padding-bottom: 10px;
+}
+
+.phones-in-basket table td:first-child {
+	width: 4%;	
+}
+
+.phones-in-basket table td{
+	padding-top: 10px;
+	padding-bottom: 10px;		
+	width: 24%;	
+}
+
+.name-and-photo {
+	display: flex;
+	justify-content: center;
+}
+
+.phoneName {
+	margin-left: 10px;
+	color: #1e90ff;
+	text-decoration: none;
+}
+
+#phonePhoto {
+	border-radius: 5px;
+}
+
+#count {
+	width: 40px;
+	height: 30px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.basket-footer {
+	display: flex;	
+	margin-top: 30px;
+}
+
+.cost-and-checkout {	
+	flex-direction: column;	
+	position: relative;
+	left: 65%;	
+}
+
+#checkoutButton {
+	margin-top: 5px;
+	background-color: #42b857;
+	color: #ffffff;
+	border-radius: 7px;
+	border-width: 0;
+	height: 30px;
+	width: 150px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+#checkoutButton:hover {
+	background-color: #308a40;
+}
+
+#totalCost {
+	font-size: 20px;	
+}
+
+#goBack {	
+	color: #1e90ff;
+}
+
+#goBack:hover, .phoneName:hover {	
+	color: #dc133c;
+}
+
