@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<title>Интернет магазин</title>
-	<link rel="stylesheet" href="Css/Home.css">
+	<meta charset="utf-8">
+	<title>Интернет магазин</title>	
+	<link rel="stylesheet" href="Css/Home.css">	
 </head>
 <body>
 	<div id=blackout>	
@@ -37,19 +38,25 @@
 	</div>	
 	<ul class="menu">
 		<li><a href = "Index.html">Интернет-магазин</a></li>
-		<li><a href = "#blackout">Войти</a></li>
-		<li><a href="Html/Basket.html">Корзина</a></li>		
+		<div class="menu__enter-and-basket">
+			<li><a href="Html/Basket.html">Корзина</a></li>
+			<li><a href = "#blackout">Войти</a></li>				
+		</div>	
 	</ul>
-	<h1>Мобильные телефоны</h1>
+	<h1 class="title">Мобильные телефоны</h1>
 	<div class="flex-container">
-		<div class="filter-phones">
+		<div class="flex-container__filter-phones">
 			<form action="http://OnlineStore/filter" method="post">
-				<div class="filter-block">
-					<b>Цена, б.р.</b><br>
-					<input id=from type="text" name="fromPrice" placeholder="от">
-					<input id=to type="text" name="toPrice" placeholder="до"><br><br>
+				<div class="flex-container__filter-block">
+					<span class="flex-container__filter-block-option-title">Цена, б.р.</span>
+					<div class="flex-container__inputs-to-row">
+						<input class="input-gap" type="number" name="fromPrice" placeholder="от" min="1">
+						<input class="input-gap" type="number" name="toPrice" placeholder="до">	
+					</div>	
+					<span class="option-title">Слова в названии</span>
+					<input id=wordsPhoneName type="text" name="wordsPhoneName"><br>
 					<details open>
-						<summary><b>Производитель<b></summary>
+						<summary><span class="option-title">Производитель</span></summary>
 							<input type="checkbox" name="producer" 
 							value="Samsung">Samsung<br>
 							<input type="checkbox" name="producer"
@@ -62,7 +69,7 @@
 							value="Nokia">Nokia<br>				
 					</details><br>		
 					<details open>				
-						<summary><b>Платформа<b></summary>
+						<summary><span class="option-title">Платформа</span></summary>
 							<input type="checkbox" name="platform" 
 							value="iOS">iOS<br>
 							<input type="checkbox" name="platform"
@@ -71,12 +78,12 @@
 							value="Windows Phone">Windows Phone<br>									
 					</details><br>
 					<details open>				
-						<summary><b>Количество SIM-карт<b></summary>
+						<summary><span class="option-title">Количество SIM-карт</span></summary>
 							<input id=simCards type="number" name="simCards" 
 							min="1" max="4"><br>												
 					</details><br>	
 					<details open>				
-						<summary><b>Оперативная память<b></summary>
+						<summary><span class="option-title">Оперативная память</span></summary>
 							<input type="checkbox" name="RAM" 
 							value="12">12 Гб<br>
 							<input type="checkbox" name="RAM" 
@@ -89,7 +96,7 @@
 							value="4">4 Гб<br>									
 					</details><br>
 					<details open>				
-						<summary><b>Встроенная память<b></summary>
+						<summary><span class="option-title">Встроенная память</span></summary>
 							<input type="checkbox" name="builtInMemory" 
 							value="1000">1 Tб<br>
 							<input type="checkbox" name="builtInMemory" 
@@ -102,12 +109,14 @@
 							value="64">64 Гб<br>									
 					</details><br>
 					<details open>				
-						<summary><b>Диагональ экрана<b></summary>					
-							<input type="text" name="fromDiagonal" placeholder="от">
-							<input type="text" name="toDiagonal" placeholder="до"><br><br>								
+						<summary><span class="option-title">Диагональ экрана, "</span></summary>
+							<div class="inputs-to-row">					
+								<input class="input-gap" type="number" name="fromDiagonal" placeholder="от">
+								<input class="input-gap" type="number" name="toDiagonal" placeholder="до">	
+							</div>							
 					</details><br>
 					<details open>				
-						<summary><b>Аккумулятор<b></summary>
+						<summary><span class="option-title">Аккумулятор</span></summary>
 							<input type="radio" name="battery" 
 							value="noMatter" checked >Не важно<br>
 							<input type="radio" name="battery" 
@@ -119,7 +128,7 @@
 				</div>
 			</form>
 		</div>
-		<div class="phone-container">
+		<div class="flex-container__phone-container">
 			<ul class="model-list">
 				<li value="mobileName">
 					<figure>
@@ -128,7 +137,7 @@
 								<img id=phonePhoto src="Images/Photo.jpeg" height="220">								
 							</div>
 							<div class="phone-detail">
-								<a id=mobileName href="Html/MobileDescription.html">Mobile.Name</a>									
+								<a class="mobileName" href="Html/MobileDescription.html">Mobile.Name</a>						
 								<div class="result_attrs">
 									<table>
 										<tr>
@@ -159,14 +168,14 @@
 								</div>
 							</div>	
 							<div class="result-tools">
-								<span id=price>Mobile.Price</span>								
+								<span class="price">Mobile.Price</span>								
 								<span name=inStock>В наличии</span>		
 								<span name=notAvailable>Нет на складе</span>						
 								<input id="toBasket" type="button" name="toBasket" value="В корзину">
 							</div>
 						</div>	
 					</figure>
-				<li>
+				</li>							
 			</ul>
 		</div>
 	</div>

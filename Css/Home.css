@@ -1,9 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 body{
-	background-color: #eee8aa;	
+	background-color: #eee8aa;		
+	font-family: 'Roboto', sans-serif;
 }
 
-body > h1{
-	color: #a52a2a
+@media handheld {
+
+  .flex-container__filter-phones {
+    visibility: hidden;
+    display: none;
+  }
+
+  .title {
+  	font-size: 1em;
+  }
+
+}
+
+.title{
+	color: #a52a2a;
+	font-family: 'Oswald', sans-serif;
 }
 
 #blackout {
@@ -17,7 +34,7 @@ body > h1{
 }
 
 #blackout:target {
-	display: block;		
+	display: block;
 }
 
 .close-icon {
@@ -88,7 +105,7 @@ body > h1{
 	display: block;
 }
 
-[type="email"], [type="password"] {
+input[type="email"], input[type="password"] {
 	margin: 5px;
 	width: 300px;
 	height: 30px;
@@ -127,8 +144,8 @@ ul.menu a {
 	padding: 10px 15px;
 }
 
-ul.menu a: hover {
-	color: #ffffff;	
+ul.menu a:hover {
+	color: #ff80af;	
 }
 
 ul.menu li {	
@@ -136,20 +153,17 @@ ul.menu li {
 	display: inline-flex;	
 }
 
-ul.menu li:last-child  {	
-	float: right;
-}
-
-ul.menu li:nth-last-child(2) {
-	float: right;
-	padding-right: 25px;	
+.menu__enter-and-basket {
+	position: absolute;
+	right: 25px;
+	top: 15px;
 }
 
 .flex-container{
 	display: flex;
 }
 
-.filter-phones{
+.flex-container__filter-phones{
 	background-color: #d3d3d3;
 	border-radius: 10px;
 	width: 250px;
@@ -159,36 +173,63 @@ ul.menu li:nth-last-child(2) {
 
 .model-list li{
 	list-style-type: none;		
-	border-width: 0px 0px 0.1px;
-	border-style: solid;	
+	border-width: 0px 0px 1px;
+	border-style: dotted;	
 	border-color: #808080;
 }
 
 .model-list li:first-child{		
-	border-top-width: 0.1px;	
+	border-top-width: 1px;	
 }
 
-.filter-block {
+.flex-container__filter-block {
 	padding: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
-#from, #to{
+.flex-container__inputs-to-row {
+	flex-direction: row;
+	margin-bottom: 20px;
+}
+
+summary {
+	cursor: pointer;
+	list-style-image: url('../Images/shevron.png');
+}
+
+input[type=checkbox], input[type=radio] {
+	cursor: pointer;
+	transform: scale(1.5);
+}
+
+.flex-container__filter-block-option-title {
+	font-weight: 600;	
+}
+
+.input-gap {	
 	width: 90px;
 	height: 22px;
 	font-size: 15px;
 }
 
-#simCards{
+#wordsPhoneName {
+	width: 187px;
+	height: 22px;
+	font-size: 15px;
+}
+
+#simCards {
 	width: 45px;	
 	height: 22px;
 	font-size: 15px;
 }
 
-.phone-element{
+.phone-element {
 	display: flex;
 }
 
-.phone-detail{
+.phone-detail {
 	word-wrap: break-word;
 	width: 450px;
 }
@@ -202,10 +243,15 @@ ul.menu li:nth-last-child(2) {
 	padding-right: 30px;
 }
 
-#mobileName {
+.mobileName {
 	text-decoration: none;
 	color: #1e90ff;
-	font-size: 20px;
+	font-size: 20px;	
+	font-weight: 700;
+}
+
+.mobileName:hover {
+	color: #dc133c;
 }
 
 #searchPhones {
@@ -218,6 +264,10 @@ ul.menu li:nth-last-child(2) {
 	cursor: pointer;
 }
 
+#searchPhones:hover {
+	background-color: #d47500;
+}
+
 .result-tools {
 	padding-left: 30px;
 	display: flex;
@@ -225,18 +275,23 @@ ul.menu li:nth-last-child(2) {
 }
 
 #toBasket {
-	background-color: #3caf50;
+	background-color: #42b857;
 	color: #ffffff;
 	border-radius: 7px;
 	border-width: 0;
 	height: 30px;
 	width: 150px;
 	font-size: 16px;
-	cursor: pointer;
+	cursor: pointer;	
 }
 
-#price {
+#toBasket:hover {
+	background-color: #308a40;	
+}
+
+.price {
 	font-size: 20px;
+	font-weight: 700;
 	margin-bottom: 30px;
 }
 
@@ -261,13 +316,12 @@ ul.menu li:nth-last-child(2) {
 .result_attrs {
 	overflow: hidden;
 	margin-top: 30px;
-	width: 100%;
-	
+	width: 100%;	
 }
 
 .result_attrs td {
-	font-weight: normal;
-	font-size: 15px;
+	font-weight: 500;
+	font-size: 15px;	
 	padding: 5px;	
 	width: 200px;	
 }

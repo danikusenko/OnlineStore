@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
 body {
 	background-color: #eee8aa;
+	font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -24,8 +27,8 @@ ul.menu a {
 	padding: 10px 15px;
 }
 
-ul.menu a: hover {
-	color: #ffffff;	
+ul.menu a:hover {
+	color: #ff80af;	
 }
 
 ul.menu li {	
@@ -33,13 +36,10 @@ ul.menu li {
 	display: inline-flex;	
 }
 
-ul.menu li:last-child  {	
-	float: right;
-}
-
-ul.menu li:nth-last-child(2) {
-	float: right;
-	padding-right: 25px;	
+.enter-and-basket {
+	position: absolute;
+	right: 25px;
+	top: 15px;
 }
 
 #phonePhoto {
@@ -92,7 +92,7 @@ ul.menu li:nth-last-child(2) {
 }
 
 #toBasket {
-	background-color: #3caf50;
+	background-color: #42b857;
 	color: #ffffff;
 	border-radius: 7px;
 	border-width: 0;
@@ -100,6 +100,10 @@ ul.menu li:nth-last-child(2) {
 	width: 150px;
 	font-size: 16px;
 	cursor: pointer;
+}
+
+#toBasket:hover {
+	background-color: #308a40;	
 }
 
 #price {
