@@ -5,6 +5,67 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+@media only screen and (max-device-width: 768px) {
+
+	h1 {
+		font-size: 50px !important;
+	}
+
+	.menu {
+		height: 80px !important;
+	}
+
+	.menu a {
+		font-size: 36px !important;
+		padding: 18px !important;
+	}
+
+	.phone-photo {
+		width: 60% !important;
+		margin-right: 50px;
+	}
+	
+	#phonePhoto {
+		height: 600px !important;
+		border-radius: 40px !important;
+	}
+
+	.result-tools {	
+		flex-direction: column !important;		
+	}
+
+	[name="inStock"], [name="notAvailable"] {
+		font-size: 30px !important;		
+		margin-top: 40px;
+		background-size: 34px !important;	
+		padding-left: 35px !important;				
+	}
+
+	.price {
+		font-size: 40px !important;
+	}	
+
+	#toBasket {		
+		height: 90px !important;
+		width: 270px !important;
+		font-size: 35px !important;	
+		border-radius: 15px !important;	
+		margin-top: 40px;
+	}
+
+	.phone-characteristics {
+		position: relative;		
+		position: absolute;
+		left: 5px;
+		bottom: 80px;	
+		font-size: 22px !important;	
+	}
+
+	.phone-characteristics table th {	
+		font-size: 25px !important;		
+	}
+}
+
 h1 {
 	color: #1e90ff;	
 	padding-left: 40px;
@@ -45,6 +106,7 @@ ul.menu li {
 #phonePhoto {
 	margin-left: 50px;
 	border-radius: 27px;	
+	height: 400px;
 }
 
 .phone-container {
@@ -106,7 +168,7 @@ ul.menu li {
 	background-color: #308a40;	
 }
 
-#price {
+.price {
 	font-size: 25px;
 	font-weight: bold;	
 }

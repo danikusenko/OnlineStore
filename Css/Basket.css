@@ -5,6 +5,47 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
+@media only screen and (max-device-width: 768px) {
+
+	.menu {
+		height: 80px !important;
+	}
+
+	.menu a {
+		font-size: 36px !important;
+		padding: 18px !important;
+	}
+
+	.phones-in-basket-for-mobile-version {	
+		display: flex !important;	
+		list-style-type: none;
+		padding-left: 0px;
+	}
+
+	.phones-in-basket-for-mobile-version_phone {
+		display: flex;
+		flex-direction: row;	
+		width: 900px;	
+		padding-left: 15px;
+	}
+
+	.phones-in-basket-for-mobile-version__photo {
+		width: 40%;
+	}
+
+	.phones-in-basket-for-mobile-version__details{
+		font-size: 40px;
+	}
+
+	.phones-in-basket{
+		display: none;
+	}
+
+	.cost-and-checkout {
+		display: none;
+	}
+}
+
 h1{
 	color: #a52a2a;	
 }
@@ -44,13 +85,19 @@ ul.menu li {
 	top: 15px;
 }
 
+.phones-in-basket-for-mobile-version {
+	display: none;
+}
+
 input[type="checkbox"] {
 	transform: scale(1.5);	
 	cursor: pointer;
 }
 
 .phones-in-basket  {	
-	border-top: 1px solid;			
+	list-style-type: none;
+	border-top: 1px solid;	
+	padding-left: 0px;		
 }
 
 .phones-in-basket table {

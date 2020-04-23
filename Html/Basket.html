@@ -15,8 +15,8 @@
 	</ul>
 	<h1>Оформление заказа</h1>
 	<h2>Список товаров</h2>
-	<div class="phones-in-basket">
-		<table>
+	<ul class="phones-in-basket">
+		<li><table>
 			<th>
 				<input type="checkbox" name="choose_phone" 
 							value="true">
@@ -47,9 +47,21 @@
 				<td>
 					<span id=price>Mobile.Price&nbsp;р.</span>
 				</td>
-			<tr>
-		</table>		
-	</div>	
+			</tr>
+		</table></li>		
+	</ul>	
+	<ul class="phones-in-basket-for-mobile-version">
+		<li>
+			<div class="phones-in-basket-for-mobile-version_phone">
+				<div class="phones-in-basket-for-mobile-version__photo">						
+					<img id=phonePhotoForMobile src="../Images/Photo.jpeg" width="300">
+				</div>
+				<div class="phones-in-basket-for-mobile-version__details">
+					<a class="phoneName" href="MobileDescription.html">Mobile.Name</a>
+				</div>
+			</div>
+		</li>
+	</ul>
 	<div class="basket-footer">
 		<a id=goBack href="../index.html">Вернуться на главную</a>
 		<div class="cost-and-checkout">

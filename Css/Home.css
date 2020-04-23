@@ -5,17 +5,101 @@ body{
 	font-family: 'Roboto', sans-serif;
 }
 
-@media handheld {
+@media only screen and (max-device-width: 768px) {
 
-  .flex-container__filter-phones {
-    visibility: hidden;
-    display: none;
-  }
+	.menu {
+		height: 80px !important;
+	}
 
-  .title {
-  	font-size: 1em;
-  }
+	.menu a {
+		font-size: 36px !important;
+		padding: 18px !important;
+	}
 
+	.title {
+		font-size: 40px !important;
+	}
+
+	#phonePhoto {
+		height: 350px !important;
+		border-radius: 25px !important;		
+	}
+
+	.photo {
+		margin-right: 40px;
+	}
+
+
+	.result-tools {
+		display: none !important;
+	}
+
+	.result-tools-for-mobile-version {
+		display: flex !important;
+		flex-direction: column;		
+	}
+
+	.price, .mobileName {
+		font-size: 30px !important;
+	}	
+
+	[name="inStock"], [name="notAvailable"] {
+		font-size: 25px !important;		
+		margin-top: 40px;				
+	}
+
+	.result_attrs {
+		display: none;
+	}
+
+	.result-tools {
+		padding-left: 0px !important;
+	}
+
+	#toBasketInMobileVersion {
+		background-color: #42b857;
+		color: #ffffff;
+		border-radius: 7px;
+		border-width: 0;
+		height: 50px;
+		width: 200px;
+		font-size: 25px;
+		cursor: pointer;	
+	}	
+
+	.flex-container__filter-phones {    
+		display: none !important;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+
+	#filter{
+		display: block !important;
+	}
+
+	.title-and-filter-button {
+		display: flex;
+	  	align-items: center;
+	  	margin-left: 40px;
+	}
+}
+
+.result-tools-for-mobile-version {
+	display: none;
+}
+
+#filter{
+	display: none;
+	position: absolute;
+	right: 15px;
+	border-radius: 7px;
+	background-color: #808080;
+	color: #ffffff;
+	text-decoration: none;	
+	padding: 10px 35px;	
+	font-size: 25px;
 }
 
 .title{
@@ -163,6 +247,7 @@ ul.menu li {
 	display: flex;
 }
 
+
 .flex-container__filter-phones{
 	background-color: #d3d3d3;
 	border-radius: 10px;
@@ -266,6 +351,10 @@ input[type=checkbox], input[type=radio] {
 
 #searchPhones:hover {
 	background-color: #d47500;
+}
+
+#phonePhoto {
+		height: 220px;
 }
 
 .result-tools {
