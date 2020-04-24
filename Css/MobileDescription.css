@@ -5,64 +5,116 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-@media only screen and (max-device-width: 768px) {
+@media screen and (min-device-width: 768px) {
+	.menu {
+		height: 40px;
+	}
+
+	.menu__ref {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	.phone-container__phone-photo {
+		width: 35%;
+	}
+
+	#phonePhoto {	
+		border-radius: 27px;	
+		height: 400px;
+	}
+
+	.phone-container__result-tools {
+		flex-direction: row;
+	}
+
+	.phone-container__price {
+		font-size: 25px;
+	}
+
+	#toBasket {
+		border-radius: 7px;
+		height: 30px;
+		width: 150px;
+		font-size: 16px;
+	}
+
+	.phone-container__phone-characteristics table th {
+		font-size: 17px;
+	}
+
+	[name="inStock"] {
+		background-size: 19px;
+		font-size: 15px;
+		padding-left: 22px;	
+	}
+
+	[name="notAvailable"] {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-device-width: 768px) {
 
 	h1 {
-		font-size: 50px !important;
+		font-size: 50px;
 	}
 
 	.menu {
-		height: 80px !important;
+		height: 80px;
 	}
 
-	.menu a {
-		font-size: 36px !important;
-		padding: 18px !important;
+	.menu__ref {
+		font-size: 36px;
+		padding: 18px;
 	}
 
-	.phone-photo {
-		width: 60% !important;
+	.phone-container__phone-photo {
+		width: 60%;
 		margin-right: 50px;
 	}
 	
 	#phonePhoto {
-		height: 600px !important;
-		border-radius: 40px !important;
+		height: 600px ;
+		border-radius: 40px ;
 	}
 
-	.result-tools {	
-		flex-direction: column !important;		
+	.phone-container__result-tools {	
+		flex-direction: column;		
 	}
 
-	[name="inStock"], [name="notAvailable"] {
-		font-size: 30px !important;		
+	[name="inStock"] {
+		font-size: 30px;		
 		margin-top: 40px;
-		background-size: 34px !important;	
-		padding-left: 35px !important;				
+		background-size: 34px;	
+		padding-left: 35px;				
 	}
 
-	.price {
-		font-size: 40px !important;
+	[name="notAvailable"] {
+		font-size: 30px;
+	}
+
+	.phone-container__price {
+		font-size: 40px;
 	}	
 
 	#toBasket {		
-		height: 90px !important;
-		width: 270px !important;
-		font-size: 35px !important;	
-		border-radius: 15px !important;	
+		height: 90px;
+		width: 270px;
+		font-size: 35px;	
+		border-radius: 15px;	
 		margin-top: 40px;
 	}
 
-	.phone-characteristics {
-		position: relative;		
+	.phone-container__phone-characteristics {	
 		position: absolute;
-		left: 5px;
-		bottom: 80px;	
-		font-size: 22px !important;	
+		top: 50%;
+		left: 5px;		
+		font-size: 22px;	
 	}
 
-	.phone-characteristics table th {	
-		font-size: 25px !important;		
+	.phone-container__phone-characteristics table th {	
+		font-size: 25px;		
 	}
 }
 
@@ -73,23 +125,20 @@ h1 {
 }
 
 .menu {
-	background: #262626;		
-	height: 40px;
+	background: #262626;	
 	border-radius: 7px;		
 }
 
 
-ul.menu a {		
+.menu__ref {		
 	display: flex;
 	color: #ffa500;			
-	text-decoration: none;
-	font-size: 18px;
-	text-align: center;
-	padding: 10px 15px;
+	text-decoration: none;	
+	text-align: center;	
 }
 
-ul.menu a:hover {
-	color: #ff80af;	
+.menu__ref:hover {
+	color: #ff80af;		
 }
 
 ul.menu li {	
@@ -97,70 +146,58 @@ ul.menu li {
 	display: inline-flex;	
 }
 
-.enter-and-basket {
+.menu__enter-and-basket {
 	position: absolute;
 	right: 25px;
 	top: 15px;
 }
 
 #phonePhoto {
-	margin-left: 50px;
-	border-radius: 27px;	
-	height: 400px;
+	margin-left: 50px;	
 }
 
 .phone-container {
 	display: flex;	
 }
 
-.phone-photo {
-	width: 35%;
-}
-
-.phone-detail {
+.phone-container__phone-detail {
 	width: 75%;
 }
 
-.price-and-available {
+.phone-container__price-and-available {
 	display: flex;
 	flex-direction: column;
 	margin-right: 50px;
 }
 
-.result-tools {
-	display: flex;
-	flex-direction: row;	
+.phone-container__result-tools {
+	display: flex;		
 }
 
-.phone-characteristics {
+.phone-container__phone-characteristics {
 	margin-top: 50px;
 	display: grid;
 	grid-template-columns: 50% 50%;	
 }
 
-.phone-characteristics table {	
+.phone-container__phone-characteristics table {	
 	margin-bottom: 20px;
 	width: 100%;		
 	word-wrap: break-word;
 }
 
-.phone-characteristics table th {
-	text-align: justify;
-	font-size: 17px;		
+.phone-container__phone-characteristics table th {
+	text-align: justify;			
 }
 
-.phone-characteristics table td {
+.phone-container__phone-characteristics table td {
 	width: 210px;		
 }
 
 #toBasket {
 	background-color: #42b857;
-	color: #ffffff;
-	border-radius: 7px;
-	border-width: 0;
-	height: 30px;
-	width: 150px;
-	font-size: 16px;
+	color: #ffffff;	
+	border-width: 0;	
 	cursor: pointer;
 }
 
@@ -168,23 +205,18 @@ ul.menu li {
 	background-color: #308a40;	
 }
 
-.price {
-	font-size: 25px;
+.phone-container__price {	
 	font-weight: bold;	
 }
 
 [name="inStock"] {
-	background-image: url(../Images/inStock.png);
-	background-size: 19px;
+	background-image: url(../Images/inStock.png);	
 	background-repeat: no-repeat;
-	font-weight: normal;
-	font-size: 15px;
-	padding-left: 22px;		
+	font-weight: normal;		
 }
 
 [name="notAvailable"] {	
 	font-weight: normal;
 	color: #ff0000;
-	display: none;
-	font-size: 15px;	
+	display: none;		
 }

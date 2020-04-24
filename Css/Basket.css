@@ -5,44 +5,140 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 
-@media only screen and (max-device-width: 768px) {
+@media screen and (min-device-width: 769px){
 
-	.menu {
-		height: 80px !important;
+	.phones-in-basket__phoneName {
+		margin-left: 10px;
 	}
 
-	.menu a {
-		font-size: 36px !important;
-		padding: 18px !important;
+	#totalCost {
+		font-size: 20px;	
+	}
+
+	#checkoutButton {		
+		border-radius: 7px;		
+		height: 30px;
+		width: 150px;
+		font-size: 16px;		
+	}
+
+	.basket-footer__cost-and-checkout {
+		left: 65%;	
+	}
+
+	.menu {
+		height: 40px;
+	}
+
+	.menu__ref {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	.phones-in-basket-for-mobile-version {
+		display: none;
+	}
+}
+
+
+@media screen and (max-device-width: 768px) {
+
+	.menu {
+		height: 80px;
+	}
+
+	.menu__ref {
+		font-size: 36px;
+		padding: 18px;
+	}
+
+	h1 {
+		font-size: 40px;
 	}
 
 	.phones-in-basket-for-mobile-version {	
-		display: flex !important;	
+		display: flex;	
 		list-style-type: none;
 		padding-left: 0px;
 	}
 
-	.phones-in-basket-for-mobile-version_phone {
+	.phones-in-basket-for-mobile-version__phone {
 		display: flex;
 		flex-direction: row;	
 		width: 900px;	
-		padding-left: 15px;
+		padding: 15px;
+		border-bottom:  1px solid grey;
+	}
+
+	.phones-in-basket-for-mobile-version__phone:first-child {		
+		border-top:  1px solid grey;
+	}
+
+	.phonePhotoForMobile {
+		border-radius: 35px;
 	}
 
 	.phones-in-basket-for-mobile-version__photo {
 		width: 40%;
 	}
 
+	.phones-in-basket__phoneName {
+		font-size: 45px;
+	}
+
 	.phones-in-basket-for-mobile-version__details{
+		display: flex;
+		flex-direction: column;		
 		font-size: 40px;
 	}
 
-	.phones-in-basket{
+	.countForMobileVersion {
+		height: 60px;
+		width: 80px;
+		margin: 40px 0px;
+		font-size: 40px;
+	}
+
+	.phones-in-basket-for-mobile-version__priceForMobileVersion {
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	.phones-in-basket, h2{
 		display: none;
 	}
 
-	.cost-and-checkout {
-		display: none;
+	.basket-footer__cost-and-checkout {		
+		left: 20%;
+			
+	}
+
+	.basket-footer {
+		font-size: 30px;
+	}
+
+	#totalCost {
+		font-weight: 600;
+	}
+
+	#checkoutButton {			
+		height: 110px;
+		width: 100%;
+		font-size: 40px;	
+		position: fixed;
+		bottom: 0px;	
+		left: 0px;	
+	}
+
+	.phones-in-basket-for-mobile-version__box-shadow {
+		background: #c9c075 radial-gradient(circle at 50% 0, rgba(255,255,255,.65), rgba(255,255,255,.35));
+		box-shadow:
+		inset rgba(0,0,0,.6) 0 -3px 8px,
+		inset rgba(252,255,255,.7) 0 3px 8px,
+		rgba(0,0,0,.8) 0 3px 8px -3px;
+		margin: 1em auto;
+		padding: 15px;
+		border-radius: 10px;
 	}
 }
 
@@ -55,22 +151,19 @@ h2{
 }
 
 .menu {
-	background: #262626;		
-	height: 40px;
+	background: #262626;	
 	border-radius: 7px;		
 }
 
 
-ul.menu a {		
+.menu__ref {		
 	display: flex;
 	color: #ffa500;			
-	text-decoration: none;
-	font-size: 18px;
-	text-align: center;
-	padding: 10px 15px;
+	text-decoration: none;	
+	text-align: center;	
 }
 
-ul.menu a:hover {
+.menu__ref:hover {
 	color: #ff80af;		
 }
 
@@ -79,14 +172,10 @@ ul.menu li {
 	display: inline-flex;	
 }
 
-.exit-and-basket {
+.menu__exit-and-basket {
 	position: absolute;
 	right: 25px;
 	top: 15px;
-}
-
-.phones-in-basket-for-mobile-version {
-	display: none;
 }
 
 input[type="checkbox"] {
@@ -97,7 +186,8 @@ input[type="checkbox"] {
 .phones-in-basket  {	
 	list-style-type: none;
 	border-top: 1px solid;	
-	padding-left: 0px;		
+	padding-left: 0px;	
+	margin-top: 0px;	
 }
 
 .phones-in-basket table {
@@ -123,13 +213,12 @@ input[type="checkbox"] {
 	width: 24%;	
 }
 
-.name-and-photo {
+.phones-in-basket__name-and-photo {
 	display: flex;
 	justify-content: center;
 }
 
-.phoneName {
-	margin-left: 10px;
+.phones-in-basket__phoneName {	
 	color: #1e90ff;
 	text-decoration: none;
 }
@@ -150,21 +239,16 @@ input[type="checkbox"] {
 	margin-top: 30px;
 }
 
-.cost-and-checkout {	
+.basket-footer__cost-and-checkout {	
 	flex-direction: column;	
-	position: relative;
-	left: 65%;	
+	position: relative;		
 }
 
 #checkoutButton {
 	margin-top: 5px;
 	background-color: #42b857;
-	color: #ffffff;
-	border-radius: 7px;
-	border-width: 0;
-	height: 30px;
-	width: 150px;
-	font-size: 16px;
+	color: #ffffff;	
+	border-width: 0;	
 	cursor: pointer;
 }
 
@@ -172,15 +256,11 @@ input[type="checkbox"] {
 	background-color: #308a40;
 }
 
-#totalCost {
-	font-size: 20px;	
-}
-
 #goBack {	
 	color: #1e90ff;
 }
 
-#goBack:hover, .phoneName:hover {	
+#goBack:hover, .phones-in-basket__phoneName:hover {	
 	color: #dc133c;
 }
 

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Оформление заказа</title>
+	<link rel="stylesheet" href="../Css/Basket.css">
+</head>
+<body>
+	<ul class="menu">
+		<li><a class="menu__ref" href = "../index.html">Интернет-магазин</a></li>
+		<div class="menu__exit-and-basket">
+			<li><a class="menu__ref" href="Baske.html">Корзина</a></li>	
+			<li><a class="menu__ref" href = "">Выход</a></li>
+		</div>		
+	</ul>
+	<h1>Оформление заказа</h1>
+	<h2>Список товаров</h2>
+	<ul class="phones-in-basket">
+		<li>
+			<table>
+				<th>
+					<input type="checkbox" name="choose_phone" 
+								value="true">
+				</th>
+				<th>Мобильный телефон</th>
+				<th>Количество</th>
+				<th>Доставка</th>
+				<th>Cтоимость</th>
+				<tr>
+					<td>
+						<input type="checkbox" name="choose_phone" 
+								value="true">
+					</td>
+					<td>
+						<div class="phones-in-basket__name-and-photo">						
+							<img id=phonePhoto src="../Images/Photo.jpeg" height="80">
+							<a class="phones-in-basket__phoneName" href="MobileDescription.html">Mobile.Name</a>
+						</div>
+					</td>
+					<td>
+						<input id=count type="number" name="count" 
+								min="0" value="1">
+					</td>
+					<td>
+						<span >Курьером: </span>
+						<span>завтра</span>
+					</td>
+					<td>
+						<span id=price>Mobile.Price&nbsp;р.</span>
+					</td>
+				</tr>
+			</table>
+		</li>		
+	</ul>	
+	<ul class="phones-in-basket-for-mobile-version">
+		<li>
+			<div class="phones-in-basket-for-mobile-version__phone">
+				<div class="phones-in-basket-for-mobile-version__photo">						
+					<img class="phonePhotoForMobile" src="../Images/Photo.jpeg" width="300">
+				</div>
+				<div class="phones-in-basket-for-mobile-version__details">
+					<a class="phones-in-basket__phoneName" href="MobileDescription.html">Mobile.Name</a>
+					<input class="countForMobileVersion" type="number" name="count" 
+							min="0" value="1">
+					<span class="phones-in-basket-for-mobile-version__priceForMobileVersion">Mobile.Price&nbsp;р.</span>
+					<div class="phones-in-basket-for-mobile-version__box-shadow">
+						<span >Доставка - Day</span>
+					</div>					
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="basket-footer">
+		<a id=goBack href="../index.html">Вернуться на главную</a>
+		<div class="basket-footer__cost-and-checkout">
+			<div>
+				<span>Общая стоимость:&nbsp;</span>
+				<span id=totalCost>totalCost&nbsp;р.</span>
+			</div>
+			<input id=checkoutButton type="submit" value="Оформить заказ">	
+		</div>	
+	</div>				
+</body>
+</html>

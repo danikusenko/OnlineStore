@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<title>Интернет магазин</title>	
+	<title>Фильтр</title>	
 	<link rel="stylesheet" href="../Css/FilterMobileVersion.css">	
 </head>
 <body>
 	<div class="title-and-close">		
 		<h1>Подробный фильтр</h1>
-		<a class="close-icon" href="../index.html"></a>
+		<a class="title-and-close__close-icon" href="../index.html"></a>
 	</div>
 	<div class="flex-container">
 		<div class="flex-container__filter-phones">
@@ -15,13 +15,13 @@
 				<div class="flex-container__filter-block">
 					<span class="flex-container__filter-block-option-title">Цена, б.р.</span>
 					<div class="flex-container__inputs-to-row">
-						<input class="input-gap" type="number" name="fromPrice" placeholder="от" min="1">
-						<input class="input-gap" type="number" name="toPrice" placeholder="до">	
+						<input class="flex-container__input-gap" type="number" name="fromPrice" placeholder="от" min="1">
+						<input class="flex-container__input-gap" type="number" name="toPrice" placeholder="до">	
 					</div>	
-					<span class="option-title">Слова в названии</span>
+					<span class="flex-container__option-title">Слова в названии</span>
 					<input id=wordsPhoneName type="text" name="wordsPhoneName"><br>
 					<details open>
-						<summary><span class="option-title">Производитель</span></summary>
+						<summary><span class="flex-container__option-title">Производитель</span></summary>
 							<input type="checkbox" name="producer" 
 							value="Samsung">Samsung<br>
 							<input type="checkbox" name="producer"
@@ -34,7 +34,7 @@
 							value="Nokia">Nokia<br>				
 					</details><br>		
 					<details open>				
-						<summary><span class="option-title">Платформа</span></summary>
+						<summary><span class="flex-container__option-title">Платформа</span></summary>
 							<input type="checkbox" name="platform" 
 							value="iOS">iOS<br>
 							<input type="checkbox" name="platform"
@@ -43,12 +43,12 @@
 							value="Windows Phone">Windows Phone<br>									
 					</details><br>
 					<details open>				
-						<summary><span class="option-title">Количество SIM-карт</span></summary>
+						<summary><span class="flex-container__option-title">Количество SIM-карт</span></summary>
 							<input id=simCards type="number" name="simCards" 
 							min="1" max="4"><br>												
 					</details><br>	
 					<details open>				
-						<summary><span class="option-title">Оперативная память</span></summary>
+						<summary><span class="flex-container__option-title">Оперативная память</span></summary>
 							<input type="checkbox" name="RAM" 
 							value="12">12 Гб<br>
 							<input type="checkbox" name="RAM" 
@@ -61,7 +61,7 @@
 							value="4">4 Гб<br>									
 					</details><br>
 					<details open>				
-						<summary><span class="option-title">Встроенная память</span></summary>
+						<summary><span class="flex-container__option-title">Встроенная память</span></summary>
 							<input type="checkbox" name="builtInMemory" 
 							value="1000">1 Tб<br>
 							<input type="checkbox" name="builtInMemory" 
@@ -74,14 +74,14 @@
 							value="64">64 Гб<br>									
 					</details><br>
 					<details open>				
-						<summary><span class="option-title">Диагональ экрана, "</span></summary>
+						<summary><span class="flex-container__option-title">Диагональ экрана, "</span></summary>
 							<div class="flex-container__inputs-to-row">					
 								<input class="input-gap" type="number" name="fromDiagonal" placeholder="от">
 								<input class="input-gap" type="number" name="toDiagonal" placeholder="до">	
 							</div>							
 					</details><br>
 					<details open>				
-						<summary><span class="option-title">Аккумулятор</span></summary>
+						<summary><span class="flex-container__option-title">Аккумулятор</span></summary>
 							<input type="radio" name="battery" 
 							value="noMatter" checked >Не важно<br>
 							<input type="radio" name="battery" 
