@@ -437,6 +437,10 @@ input[type=checkbox], input[type=radio] {
 	background-color: #308a40;	
 }
 
+summary {
+	cursor: pointer;
+}
+
 .phone-container__price {	
 	font-weight: 700;
 	margin-bottom: 30px;
