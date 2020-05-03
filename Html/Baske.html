@@ -6,21 +6,25 @@
 	<link rel="stylesheet" href="../Css/Basket.css">
 </head>
 <body>
-	<ul class="menu">
-		<li><a class="menu__ref" href = "../index.html">Интернет-магазин</a></li>
-		<div class="menu__exit-and-basket">
-			<li><a class="menu__ref" href="Baske.html">Корзина</a></li>	
-			<li><a class="menu__ref" href = "">Выход</a></li>
-		</div>		
-	</ul>
+	<nav>
+		<ul class="menu">
+			<li><a class="menu__ref" href = "../index.html">Интернет-магазин</a></li>
+			<div class="menu__exit-and-basket">
+				<li><a class="menu__ref" href="Baske.html">Корзина</a></li>	
+				<li><a class="menu__ref" href = "">Выход</a></li>
+			</div>		
+		</ul>
+	</nav>
 	<h1>Оформление заказа</h1>
 	<h2>Список товаров</h2>
 	<ul class="phones-in-basket">
 		<li>
 			<table>
 				<th>
-					<input type="checkbox" name="choose_phone" 
-								value="true">
+					<label class="phones-in-basket__checkbox-style">
+						<input type="checkbox" name="choose_phone" value="true">
+						<span class="phones-in-basket__checkmark"></span>
+					</label>
 				</th>
 				<th>Мобильный телефон</th>
 				<th>Количество</th>
@@ -28,8 +32,10 @@
 				<th>Cтоимость</th>
 				<tr>
 					<td>
-						<input type="checkbox" name="choose_phone" 
-								value="true">
+						<label class="phones-in-basket__checkbox-style">
+							<input type="checkbox" name="choose_phone" value="true">
+							<span class="phones-in-basket__checkmark"></span>
+						</label>
 					</td>
 					<td>
 						<div class="phones-in-basket__name-and-photo">						

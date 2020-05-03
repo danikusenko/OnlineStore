@@ -170,6 +170,10 @@ body{
 		border: 1px solid grey;
 	}
 
+	input[type="checkbox"]:hover {
+		background-color: blue;
+	}
+
 	.close-icon {
 		height: 60px;
 		width: 60px;
@@ -353,9 +357,74 @@ ul.menu li {
   outline: 0;
 }
 
-input[type=checkbox], input[type=radio] {
+input[type=radio] {
+	position: relative;
+	right: 4px;
 	cursor: pointer;
 	transform: scale(1.5);
+}
+
+input[type=checkbox] {
+	cursor: pointer;
+	display: none;
+}
+
+.flex-container__checkbox-style {
+	display: block;  
+	 position: relative;
+  	padding-left: 25px;
+  	margin-bottom: 12px;
+  	cursor: pointer;  		
+  	cursor: pointer;
+  	font-size: 16px;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;  	
+}
+
+.flex-container__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #e6e6e6;
+  border-radius: 5px;
+  border: 1px #a6a6a6 solid;
+   
+}
+
+.flex-container__checkbox-style:hover input ~ .flex-container__checkmark {
+  background-color: #ccc;
+}
+
+
+.flex-container__checkbox-style input:checked ~ .flex-container__checkmark {
+  background-color: #ff8c00;
+}
+
+.flex-container__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.flex-container__checkbox-style input:checked ~ .flex-container__checkmark:after, 
+.flex-container__checkbox-style:hover input ~ .flex-container__checkmark:after   {
+  display: block;
+}
+
+.flex-container__checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);  
 }
 
 .flex-container__filter-block-option-title {
@@ -438,7 +507,7 @@ input[type=checkbox], input[type=radio] {
 }
 
 summary {
-	cursor: pointer;
+	cursor: pointer;	
 }
 
 .phone-container__price {	
