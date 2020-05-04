@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="utf-8">
 	<title>Mobile.Name</title>
 	<link rel="stylesheet" href="../Css/MobileDescription.css">
 </head>
 <body>
-	<ul class="menu">
-		<li><a href = "../index.html">Интернет-магазин</a></li>
-		<li><a href = "#blackout">Войти</a></li>
-		<li><a href="Basket.html">Корзина</a></li>		
-	</ul>
+	<nav>
+		<ul class="menu">
+			<li><a class="menu__ref" href = "../index.html">Интернет-магазин</a></li>
+			<div class="menu__enter-and-basket">
+				<li><a class="menu__ref" href="Baske.html">Корзина</a></li>
+				<li><a class="menu__ref" href = "#blackout">Войти</a></li>				
+			</div>		
+		</ul>
+	</nav>
 	<h1>Mobile.Name</h1>
 	<div class="phone-container">
-		<div class="phone-photo">
-			<img id=phonePhoto src="../Images/Photo.jpeg" height="400">
+		<div class="phone-container__phone-photo">
+			<img id=phonePhoto src="../Images/Photo.jpeg">
 		</div>
-		<div class="phone-detail">
-			<div class="result-tools">
-				<div class="price-and-available">
-					<span id=price>Mobile.Price</span>								
+		<div class="phone-container__phone-detail">
+			<div class="phone-container__result-tools">
+				<div class="phone-container__price-and-available">
+					<span class="phone-container__price">Mobile.Price&nbsp;р.</span>								
 					<span name=inStock>В наличии</span>		
 					<span name=notAvailable>Нет на складе</span>	
 				</div>					
 				<input id="toBasket" type="button" name="toBasket" value="В корзину">
 			</div>			
-			<div class="phone-characteristics">								
+			<div class="phone-container__phone-characteristics">								
 				<table>
 					<tr>
 						<th colspan="2">Основные характеристики</th>

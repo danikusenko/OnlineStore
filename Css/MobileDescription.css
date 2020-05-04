@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+	background-color: #eee8aa;
+	font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-device-width: 768px) {
+	.menu {
+		height: 40px;
+	}
+
+	.menu__ref {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	.phone-container__phone-photo {
+		width: 35%;
+	}
+
+	#phonePhoto {	
+		border-radius: 27px;	
+		height: 400px;
+	}
+
+	.phone-container__result-tools {
+		flex-direction: row;
+	}
+
+	.phone-container__price {
+		font-size: 25px;
+	}
+
+	#toBasket {
+		border-radius: 7px;
+		height: 30px;
+		width: 150px;
+		font-size: 16px;
+	}
+
+	.phone-container__phone-characteristics table th {
+		font-size: 17px;
+	}
+
+	[name="inStock"] {
+		background-size: 19px;
+		font-size: 15px;
+		padding-left: 22px;	
+	}
+
+	[name="notAvailable"] {
+		font-size: 15px;
+	}
+}
+
+@media screen and (max-device-width: 768px) {
+
+	h1 {
+		font-size: 50px;
+	}
+
+	.menu {
+		height: 80px;
+	}
+
+	.menu__ref {
+		font-size: 36px;
+		padding: 18px;
+	}
+
+	.phone-container__phone-photo {
+		width: 60%;
+		margin-right: 50px;
+	}
+	
+	#phonePhoto {
+		height: 600px ;
+		border-radius: 40px ;
+	}
+
+	.phone-container__result-tools {	
+		flex-direction: column;		
+	}
+
+	[name="inStock"] {
+		font-size: 30px;		
+		margin-top: 40px;
+		background-size: 34px;	
+		padding-left: 35px;				
+	}
+
+	[name="notAvailable"] {
+		font-size: 30px;
+	}
+
+	.phone-container__price {
+		font-size: 40px;
+	}	
+
+	#toBasket {		
+		height: 90px;
+		width: 270px;
+		font-size: 35px;	
+		border-radius: 15px;	
+		margin-top: 40px;
+	}
+
+	.phone-container__phone-characteristics {	
+		position: absolute;
+		top: 50%;
+		left: 5px;		
+		font-size: 22px;	
+	}
+
+	.phone-container__phone-characteristics table th {	
+		font-size: 25px;		
+	}
+}
+
+h1 {
+	color: #1e90ff;	
+	padding-left: 40px;
+	word-wrap: break-word;
+}
+
+.menu {
+	background: #262626;	
+	border-radius: 7px;		
+}
+
+
+.menu__ref {		
+	display: flex;
+	color: #ffa500;			
+	text-decoration: none;	
+	text-align: center;	
+}
+
+.menu__ref:hover {
+	color: #ff80af;		
+}
+
+ul.menu li {	
+	list-style-type: none; 
+	display: inline-flex;	
+}
+
+.menu__enter-and-basket {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+
+#phonePhoto {
+	margin-left: 50px;	
+}
+
+.phone-container {
+	display: flex;	
+}
+
+.phone-container__phone-detail {
+	width: 75%;
+}
+
+.phone-container__price-and-available {
+	display: flex;
+	flex-direction: column;
+	margin-right: 50px;
+}
+
+.phone-container__result-tools {
+	display: flex;		
+}
+
+.phone-container__phone-characteristics {
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: 50% 50%;	
+}
+
+.phone-container__phone-characteristics table {	
+	margin-bottom: 20px;
+	width: 100%;		
+	word-wrap: break-word;
+}
+
+.phone-container__phone-characteristics table th {
+	text-align: justify;			
+}
+
+.phone-container__phone-characteristics table td {
+	width: 210px;		
+}
+
+#toBasket {
+	background-color: #42b857;
+	color: #ffffff;	
+	border-width: 0;	
+	cursor: pointer;
+}
+
+#toBasket:hover {
+	background-color: #308a40;	
+}
+
+.phone-container__price {	
+	font-weight: bold;	
+}
+
+[name="inStock"] {
+	background-image: url(../Images/inStock.png);	
+	background-repeat: no-repeat;
+	font-weight: normal;		
+}
+
+[name="notAvailable"] {	
+	font-weight: normal;
+	color: #ff0000;
+	display: none;
+}

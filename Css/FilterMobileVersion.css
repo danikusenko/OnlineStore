@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+@media screen and (max-device-width: 768px) {
+	body{
+		background-color: #dcdcdc;		
+		font-family: 'Roboto', sans-serif;
+		font-size: 40px;
+	}
+	h1 {
+		font-size: 40px;
+		text-transform: uppercase;
+	}
+
+	.title-and-close {
+		display: flex;
+		align-items: center;	
+		border-bottom: 1px solid #696969;	
+	}
+
+	.title-and-close__close-icon {
+		position: absolute;
+		cursor: pointer;
+		width: 60px;
+		height: 60px;	
+		right: 0px;		
+		background: url("../Images/close.png") no-repeat;
+		background-size: 60px;
+	}
+
+	.flex-container__filter-block {
+		padding: 0px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.flex-container__inputs-to-row {
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 20px;
+		justify-content: space-between;
+	}
+
+	input[type="number"], input[type="text"]{	
+		width: 47%;	
+		height: 70px;
+		font-size: 40px;
+	}
+
+	input[type="radio"]{
+		transform: scale(3.5);
+		width: 45px;
+		position: relative;
+		right: 8px;
+	}
+
+	input[type="checkbox"]{
+		display: none;		
+	}
+
+	.flex-container__checkbox-style {
+		display: block;  
+		 position: relative;
+	  	padding-left: 60px;
+	  	margin-bottom: 12px;
+	  	cursor: pointer;  		
+	  	cursor: pointer;
+	  	-webkit-user-select: none;
+	  	-moz-user-select: none;
+	  	-ms-user-select: none;
+	  	user-select: none; 	  	
+	}
+
+	.flex-container__checkmark {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  height: 50px;
+	  width: 50px;
+	  background-color: #e6e6e6;
+	  border-radius: 15px;
+	  border: 1px #a6a6a6 solid;	  	   
+	}
+
+	.flex-container__checkbox-style input:checked ~ .flex-container__checkmark {
+	  background-color: #ff8c00;
+	}
+
+	.flex-container__checkmark:after {
+	  content: "";
+	  position: absolute;
+	  display: none;
+	}
+
+	.flex-container__checkbox-style input:checked ~ .flex-container__checkmark:after  {
+	  display: block;
+	}
+
+	.flex-container__checkmark:after {
+	  left: 15px;
+	  top: 3px;
+	  width: 15px;
+	  height: 30px;
+	  border: solid white;
+	  border-width: 0 5px 5px 0;
+	  -webkit-transform: rotate(45deg);
+	  -ms-transform: rotate(45deg);
+	  transform: rotate(45deg);  
+	}
+
+	#searchPhones {
+		background-color: #ff8c00;
+		color: #ffffff;
+		border-width: 0px;
+		width: 100%;
+		height: 85px;
+		border-radius: 10px;	
+		font-size: 45px;
+		position: fixed;
+		bottom: 0px;	
+	}	
+
+	:focus {
+  		outline: 0;  		 		
+	}	
+}

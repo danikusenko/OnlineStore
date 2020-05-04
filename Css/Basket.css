@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+	background-color: #eee8aa;	
+	font-family: 'Roboto', sans-serif;
+}
+
+@media screen and (min-device-width: 769px){
+
+	.phones-in-basket__phoneName {
+		margin-left: 10px;
+	}
+
+	#totalCost {
+		font-size: 20px;	
+	}
+
+	#checkoutButton {		
+		border-radius: 7px;		
+		height: 30px;
+		width: 150px;
+		font-size: 16px;		
+	}
+
+	.basket-footer__cost-and-checkout {
+		left: 65%;	
+	}
+
+	.menu {
+		height: 40px;
+	}
+
+	.menu__ref {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	.phones-in-basket-for-mobile-version {
+		display: none;
+	}
+}
+
+
+@media screen and (max-device-width: 768px) {
+
+	.menu {
+		height: 80px;
+	}
+
+	.menu__ref {
+		font-size: 36px;
+		padding: 18px;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	.phones-in-basket-for-mobile-version {	
+		display: flex;	
+		list-style-type: none;
+		padding-left: 0px;
+	}
+
+	.phones-in-basket-for-mobile-version__phone {
+		display: flex;
+		flex-direction: row;	
+		width: 900px;	
+		padding: 15px;
+		border-bottom:  1px solid grey;
+	}
+
+	.phones-in-basket-for-mobile-version__phone:first-child {		
+		border-top:  1px solid grey;
+	}
+
+	.phonePhotoForMobile {
+		border-radius: 35px;
+	}
+
+	.phones-in-basket-for-mobile-version__photo {
+		width: 40%;
+	}
+
+	.phones-in-basket__phoneName {
+		font-size: 45px;
+	}
+
+	.phones-in-basket-for-mobile-version__details{
+		display: flex;
+		flex-direction: column;		
+		font-size: 40px;
+	}
+
+	.countForMobileVersion {
+		height: 60px;
+		width: 80px;
+		margin: 40px 0px;
+		font-size: 40px;
+	}
+
+	.phones-in-basket-for-mobile-version__priceForMobileVersion {
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+
+	.phones-in-basket, h2{
+		display: none;
+	}
+
+	.basket-footer__cost-and-checkout {		
+		left: 20%;
+			
+	}
+
+	.basket-footer {
+		font-size: 30px;
+	}
+
+	#totalCost {
+		font-weight: 600;
+	}
+
+	#checkoutButton {			
+		height: 110px;
+		width: 100%;
+		font-size: 40px;	
+		position: fixed;
+		bottom: 0px;	
+		left: 0px;	
+	}
+
+	.phones-in-basket-for-mobile-version__box-shadow {
+		background: #c9c075 radial-gradient(circle at 50% 0, rgba(255,255,255,.65), rgba(255,255,255,.35));
+		box-shadow:
+		inset rgba(0,0,0,.6) 0 -3px 8px,
+		inset rgba(252,255,255,.7) 0 3px 8px,
+		rgba(0,0,0,.8) 0 3px 8px -3px;
+		margin: 1em auto;
+		padding: 15px;
+		border-radius: 10px;
+	}
+}
+
+h1{
+	color: #a52a2a;	
+}
+
+h2{
+	margin-bottom: 5px;
+}
+
+.menu {
+	background: #262626;	
+	border-radius: 7px;		
+}
+
+
+.menu__ref {		
+	display: flex;
+	color: #ffa500;			
+	text-decoration: none;	
+	text-align: center;	
+}
+
+.menu__ref:hover {
+	color: #ff80af;		
+}
+
+ul.menu li {	
+	list-style-type: none; 
+	display: inline-flex;	
+}
+
+.menu__exit-and-basket {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+
+input[type="checkbox"] {
+	display: none;	
+	cursor: pointer;
+}
+
+.phones-in-basket__checkbox-style {
+	display: block;  
+	 position: relative;
+  	padding-left: 25px;
+  	margin-bottom: 12px;
+  	cursor: pointer;  		
+  	cursor: pointer;
+  	font-size: 16px;
+  	-webkit-user-select: none;
+  	-moz-user-select: none;
+  	-ms-user-select: none;
+  	user-select: none;  	
+}
+
+.phones-in-basket__checkmark {
+  	position: absolute;
+  	top: 0;
+  	left: 35px;
+  	height: 18px;
+  	width: 18px;
+  	background-color: #e6e6e6;
+  	border-radius: 5px;
+  	border: 1px #a6a6a6 solid;   
+}
+
+.phones-in-basket__checkbox-style:hover input ~ .flex-container__checkmark {
+  	background-color: #ccc;
+}
+
+
+.phones-in-basket__checkbox-style input:checked ~ .phones-in-basket__checkmark {
+  	background-color: #0072bc;
+}
+
+.phones-in-basket__checkmark:after {
+  	content: "";
+  	position: absolute;
+  	display: none;
+}
+
+.phones-in-basket__checkbox-style input:checked ~ .phones-in-basket__checkmark:after, 
+.phones-in-basket__checkbox-style:hover input ~ .phones-in-basket__checkmark:after   {
+  	display: block;
+}
+
+.phones-in-basket__checkmark:after {
+  	left: 7px;
+  	top: 3px;
+  	width: 4px;
+  	height: 8px;
+  	border: solid white;
+  	border-width: 0 2px 2px 0;
+  	-webkit-transform: rotate(45deg);
+  	-ms-transform: rotate(45deg);
+  	transform: rotate(45deg);  
+}
+
+.phones-in-basket  {	
+	list-style-type: none;
+	border-top: 1px solid;	
+	padding-left: 0px;	
+	margin-top: 0px;	
+}
+
+.phones-in-basket table {
+	width: 100%;	
+	text-align: center;	
+	margin-top: 30px;			
+	border-bottom: 1px dotted grey;
+}
+
+
+.phones-in-basket table th{		
+	border-bottom: 1px dotted grey;	
+	padding-bottom: 10px;
+}
+
+.phones-in-basket table td:first-child {
+	width: 4%;	
+}
+
+.phones-in-basket table td{
+	padding-top: 10px;
+	padding-bottom: 10px;		
+	width: 24%;	
+}
+
+.phones-in-basket__name-and-photo {
+	display: flex;
+	justify-content: center;
+}
+
+.phones-in-basket__phoneName {	
+	color: #1e90ff;
+	text-decoration: none;
+}
+
+#phonePhoto {
+	border-radius: 5px;
+}
+
+#count {
+	width: 40px;
+	height: 30px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.basket-footer {
+	display: flex;	
+	margin-top: 30px;
+}
+
+.basket-footer__cost-and-checkout {	
+	flex-direction: column;	
+	position: relative;		
+}
+
+#checkoutButton {
+	margin-top: 5px;
+	background-color: #42b857;
+	color: #ffffff;	
+	border-width: 0;	
+	cursor: pointer;
+}
+
+#checkoutButton:hover {
+	background-color: #308a40;
+}
+
+#goBack {	
+	color: #1e90ff;
+}
+
+#goBack:hover, .phones-in-basket__phoneName:hover {	
+	color: #dc133c;
+}
