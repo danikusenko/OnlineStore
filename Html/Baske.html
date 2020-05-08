@@ -22,7 +22,7 @@
 			<table>
 				<th>
 					<label class="phones-in-basket__checkbox-style">
-						<input type="checkbox" name="choose_phone" value="true">
+						<input type="checkbox" name="choose_all_phones" onclick="headCheckboxClick(this)" value="true" checked>
 						<span class="phones-in-basket__checkmark"></span>
 					</label>
 				</th>
@@ -33,7 +33,7 @@
 				<tr>
 					<td>
 						<label class="phones-in-basket__checkbox-style">
-							<input type="checkbox" name="choose_phone" value="true">
+							<input type="checkbox" name="choose_phone" value="true" onclick="phoneCheckboxClick(this)" checked>
 							<span class="phones-in-basket__checkmark"></span>
 						</label>
 					</td>
@@ -85,6 +85,7 @@
 			</div>
 			<input id=checkoutButton type="submit" value="Оформить заказ">	
 		</div>	
-	</div>				
+	</div>
+	<script src="../Js/Basket.js"></script>				
 </body>
 </html>
