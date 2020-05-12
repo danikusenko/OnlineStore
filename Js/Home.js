@@ -61,7 +61,8 @@ function addToBasket(phoneId,event){
 	sessionStorage.setItem("phone" + i,JSON.stringify(phoneId));
 	phoneId.inBasket = true;	
 	let basket_buttons = event.target.parentElement.parentElement.parentElement.getElementsByClassName('phone-container__toBasket');
-	for(let j = 0; j < basket_buttons.length; j++){		
+	for(let j = 0; j < basket_buttons.length; j++){	
+		basket_buttons[j].setAttribute("disabled","true");	
 		basket_buttons[j].setAttribute("value", "В корзине");		
 		basket_buttons[j].style.backgroundColor = "#ffffff";
 		basket_buttons[j].style.color = "#42b857";
@@ -77,6 +78,7 @@ function setClickedButtons(){
 			let button_name = sessionStorage.getItem("buttons"+i);					
 			for(let j = 0; j<2; j++){	
 				let buttons = document.getElementsByName(button_name);
+				buttons[j].setAttribute("disabled","true");
 				buttons[j].setAttribute("value", "В корзине");
 				buttons[j].style.backgroundColor = "#ffffff";
 				buttons[j].style.color = "#42b857";
