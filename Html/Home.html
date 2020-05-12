@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>	
-	<title>Фильтр</title>	
-	<link rel="stylesheet" href="../Css/FilterMobileVersion.css">	
+	<link rel="stylesheet" href="../Css/Home.css">	
 </head>
 <body>
-	<div class="title-and-close">		
-		<h1>Подробный фильтр</h1>
-		<a class="title-and-close__close-icon" href="Home.html"></a>
+	<div id="phones-content">
+	<div class="title-and-filter-button">
+		<h1 id=title>Мобильные телефоны</h1>
+		<a id="filter" href="FilterMobileVersion.html">Фильтр</a>
 	</div>
 	<div class="flex-container">
 		<div class="flex-container__filter-phones">
@@ -17,8 +17,8 @@
 					<div class="flex-container__inputs-to-row">
 						<input class="flex-container__input-gap" type="number" name="fromPrice" placeholder="от" min="1">
 						<input class="flex-container__input-gap" type="number" name="toPrice" placeholder="до">	
-					</div>					
-					<label class="flex-container__option-title" for="wordsPhoneName">Слова в названии</label>
+					</div>	
+					<span class="flex-container__filter-block-option-title">Слова в названии</span>
 					<input id=wordsPhoneName type="text" name="wordsPhoneName"><br>
 					<details open>
 						<summary><span class="flex-container__filter-block-option-title">Производитель</span></summary>
@@ -66,8 +66,8 @@
 								<span class="flex-container__checkmark"></span>
 							</label>							
 					</details><br>
-					<details open>				
-						<summary><span class="flex-container__option-title">Количество SIM-карт</span></summary>
+					<details open>
+						<summary><span class="flex-container__filter-block-option-title">Количество SIM-карт</span></summary>
 							<input id=simCards type="number" name="simCards" 
 							min="1" max="4"><br>												
 					</details><br>	
@@ -127,20 +127,24 @@
 								<span class="flex-container__checkmark"></span>
 							</label>									
 					</details><br>
-					<details open>				
-						<summary><span class="flex-container__option-title">Диагональ экрана, "</span></summary>
-							<div class="flex-container__inputs-to-row">					
-								<input class="input-gap" type="number" name="fromDiagonal" placeholder="от">
-								<input class="input-gap" type="number" name="toDiagonal" placeholder="до">	
+					<details open>
+						<summary><span class="flex-container__filter-block-option-title">Диагональ экрана, "</span></summary>
+							<div class="flex-container__inputs-to-row-diagonal">					
+								<label>
+									<input class="flex-container__input-gap" type="number" name="fromDiagonal" placeholder="от">
+								</label>
+								<label>
+									<input class="flex-container__input-gap" type="number" name="toDiagonal" placeholder="до">
+								</label>	
 							</div>							
 					</details><br>
 					<details open>				
-						<summary><span class="flex-container__option-title">Аккумулятор</span></summary>
+						<summary><span class="flex-container__filter-block-option-title">Аккумулятор</span></summary>
 							<label>
 								<input type="radio" name="battery" 
-								value="noMatter" checked>Не важно
+								value="noMatter" checked >Не важно
 							</label><br>
-							<label>							
+							<label>
 								<input type="radio" name="battery" 
 								value="nonRemovable">Несъемный
 							</label><br>
@@ -148,11 +152,17 @@
 								<input type="radio" name="battery" 
 								value="removable">Съёмный
 							</label><br>									
-					</details><br><br>		
+					</details><br>		
 					<input id="searchPhones" type="submit" name="searchPhones" value="Найти телефоны">
 				</div>
 			</form>
 		</div>
-	<script src="../Js/FilterMobileVersion.js"></script>
-	</body>
+		<div class="phone-container">
+			<ul id=phone_list class="phone-container__model-list">				
+			</ul>
+		</div>
+	</div>		
+	<script src="../Js/Home.js"></script>
+</div>
+</body>
 </html>

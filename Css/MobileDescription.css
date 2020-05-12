@@ -3,18 +3,10 @@
 body {
 	background-color: #eee8aa;
 	font-family: 'Roboto', sans-serif;
+	margin: 0px;	
 }
 
 @media screen and (min-device-width: 768px) {
-	.menu {
-		height: 40px;
-	}
-
-	.menu__ref {
-		font-size: 18px;
-		padding: 10px 15px;
-	}
-
 	.phone-container__phone-photo {
 		width: 35%;
 	}
@@ -43,13 +35,13 @@ body {
 		font-size: 17px;
 	}
 
-	[name="inStock"] {
+	#inStock {
 		background-size: 19px;
 		font-size: 15px;
 		padding-left: 22px;	
 	}
 
-	[name="notAvailable"] {
+	#notAvailable {
 		font-size: 15px;
 	}
 }
@@ -58,15 +50,6 @@ body {
 
 	h1 {
 		font-size: 50px;
-	}
-
-	.menu {
-		height: 80px;
-	}
-
-	.menu__ref {
-		font-size: 36px;
-		padding: 18px;
 	}
 
 	.phone-container__phone-photo {
@@ -83,14 +66,14 @@ body {
 		flex-direction: column;		
 	}
 
-	[name="inStock"] {
+	#inStock {
 		font-size: 30px;		
 		margin-top: 40px;
 		background-size: 34px;	
 		padding-left: 35px;				
 	}
 
-	[name="notAvailable"] {
+	#notAvailable {
 		font-size: 30px;
 	}
 
@@ -108,7 +91,7 @@ body {
 
 	.phone-container__phone-characteristics {	
 		position: absolute;
-		top: 50%;
+		top: 800px;
 		left: 5px;		
 		font-size: 22px;	
 	}
@@ -129,28 +112,6 @@ h1 {
 	border-radius: 7px;		
 }
 
-
-.menu__ref {		
-	display: flex;
-	color: #ffa500;			
-	text-decoration: none;	
-	text-align: center;	
-}
-
-.menu__ref:hover {
-	color: #ff80af;		
-}
-
-ul.menu li {	
-	list-style-type: none; 
-	display: inline-flex;	
-}
-
-.menu__enter-and-basket {
-	position: absolute;
-	right: 25px;
-	top: 15px;
-}
 
 #phonePhoto {
 	margin-left: 50px;	
@@ -209,13 +170,13 @@ ul.menu li {
 	font-weight: bold;	
 }
 
-[name="inStock"] {
+#inStock {
 	background-image: url(../Images/inStock.png);	
 	background-repeat: no-repeat;
 	font-weight: normal;		
 }
 
-[name="notAvailable"] {	
+ #notAvailable {	
 	font-weight: normal;
 	color: #ff0000;
 	display: none;

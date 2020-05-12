@@ -2,30 +2,20 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Mobile.Name</title>
 	<link rel="stylesheet" href="../Css/MobileDescription.css">
 </head>
-<body>
-	<nav>
-		<ul class="menu">
-			<li><a class="menu__ref" href = "../index.html">Интернет-магазин</a></li>
-			<div class="menu__enter-and-basket">
-				<li><a class="menu__ref" href="Baske.html">Корзина</a></li>
-				<li><a class="menu__ref" href = "#blackout">Войти</a></li>				
-			</div>		
-		</ul>
-	</nav>
-	<h1>Mobile.Name</h1>
+<body>	
+	<h1 class="title">Mobile.Name</h1>
 	<div class="phone-container">
 		<div class="phone-container__phone-photo">
-			<img id=phonePhoto src="../Images/Photo.jpeg">
+			<img id=phonePhoto width="250px">
 		</div>
 		<div class="phone-container__phone-detail">
 			<div class="phone-container__result-tools">
 				<div class="phone-container__price-and-available">
 					<span class="phone-container__price">Mobile.Price&nbsp;р.</span>								
-					<span name=inStock>В наличии</span>		
-					<span name=notAvailable>Нет на складе</span>	
+					<span id="inStock">В наличии</span>		
+					<span id="notAvailable">Нет на складе</span>	
 				</div>					
 				<input id="toBasket" type="button" name="toBasket" value="В корзину">
 			</div>			
@@ -33,18 +23,18 @@
 				<table>
 					<tr>
 						<th colspan="2">Основные характеристики</th>
-					</tr>
-					<tr>
-						<td>Дата выхода</td>
-						<td>Mobile.Date</td>
-					</tr>
+					</tr>					
 					<tr>
 						<td>Тип устройства</td>
 						<td>Mobile.Type</td>						
 					</tr>
 					<tr>
 						<td>Платформа</td>
-						<td>Mobile.Platform</td>						
+						<td class="phone-container__platform">Mobile.Platform</td>						
+					</tr>
+					<tr>
+						<td>Кол-во SIM-карт</td>
+						<td class="phone-container__sim-cards-number">Mobile.SimCardsNumber</td>	
 					</tr>
 				</table>	
 				<table>
@@ -98,12 +88,12 @@
 					</tr>
 					<tr>
 						<td>Оперативная память</td>
-						<td>Mobile.RAM</td>
+						<td class="phone-container__RAM">Mobile.RAM</td>
 					</tr>
 					</tr>
 					<tr>
 						<td>Постоянная память</td>
-						<td>Mobile.PersistentMemory</td>						
+						<td class="phone-container__internal-memory">Mobile.PersistentMemory</td>						
 					</tr>
 					<tr>
 						<td>Поддержка карт памяти</td>
@@ -130,6 +120,7 @@
 				</table>
 			</div>
 		</div>
-	</div>	
+	</div>
+	<script src="../Js/MobileDescription.js"></script>	
 </body>
 </html>
