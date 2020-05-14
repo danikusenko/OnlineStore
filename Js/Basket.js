@@ -1,9 +1,9 @@
-var table = document.getElementById('phoneTable');
-var total_price = 0;
+const table = document.getElementById('phoneTable');
+let total_price = 0;
 function initBasket(){
 	let phone;
-	var count = sessionStorage.getItem("count");
-	let ul = document.getElementById('phoneBasetInMobileVersion');
+	let count = sessionStorage.getItem("count");
+	let ul = document.getElementById('phoneBasketInMobileVersion');
 	if(count === null || count === 0)	{
 		document.getElementById('basket-content').style.display = "none";
 		document.getElementById('basket-empty').style.display = "block";		
@@ -46,8 +46,8 @@ function phoneDetails(phoneId){
 	content.innerHTML = '<object type="text/html" data="MobileDescription.html" style="width:100%; height:100%;"></object>';
 }
 
-var choosePhone = document.getElementsByName("choose_phone");
-var chooseAllPhones = document.getElementsByName("choose_all_phones");
+let choosePhone = document.getElementsByName("choose_phone");
+let chooseAllPhones = document.getElementsByName("choose_all_phones");
 
 function headCheckboxClick(checkbox) {		
 	if(checkbox.checked){

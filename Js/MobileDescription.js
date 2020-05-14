@@ -9,7 +9,7 @@ function setProperty(class_name, value){
 }
 
 function viewPhone(){
-	var phone = JSON.parse(sessionStorage.getItem('phone'));
+	let phone = JSON.parse(sessionStorage.getItem('phone'));
 	if(phone.availability == true){
 		document.getElementById('inStock').style.display = "block";
 		document.getElementById('notAvailable').style.display = "none";
@@ -25,7 +25,7 @@ function viewPhone(){
 	setProperty('phone-container__RAM',phone.RAM + " Гб");
 	setProperty('phone-container__internal-memory',phone.internal_memory + " Гб");
 	setProperty('phone-container__sim-cards-number', phone.sim_cards_number);
-	var basket_button = document.getElementById('toBasket');
+	let basket_button = document.getElementById('toBasket');
 	if(phone.inBasket === true){
 		basket_button.setAttribute("value", "В корзине");		
 		basket_button.style.backgroundColor = "#ffffff";

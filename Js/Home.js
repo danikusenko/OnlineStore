@@ -16,14 +16,16 @@ class MobilePhone {
 	}	
 }
 
-var phone = new MobilePhone("phone","Смартфон Xiaomi Redmi 7A 2GB/32GB Gem Blue", "../Images/Photo.jpeg","Xiaomi", "Android", 
+let phone = new MobilePhone("phone","Смартфон Xiaomi Redmi 7A 2GB/32GB Gem Blue", "../Images/Photo.jpeg","Xiaomi", "Android", 
 	2, 2,32, 5.4, 100.54, true);
-var phone2 = new MobilePhone("phone2","Samsung Galaxy A10 2Gb/32Gb Blue (SM-A105F/DS)", "../Images/Phone2.jpg","Samsung", "Android", 
+let phone2 = new MobilePhone("phone2","Samsung Galaxy A10 2Gb/32Gb Blue (SM-A105F/DS)", "../Images/Phone2.jpg","Samsung", "Android", 
 	2, 2,32, 5.4, 299.99, true);
-var phone3 = new MobilePhone("phone3","Apple iPhone Xr 64Gb Red", "../Images/Phone3.jpg","Apple", "iOS", 
+let phone3 = new MobilePhone("phone3","Apple iPhone Xr 64Gb Red", "../Images/Phone3.jpg","Apple", "iOS", 
 	2, 2,32, 5.4, 599.99, true);
-var ul = document.getElementById('phone_list');
-var iterator = 0;
+let phoneList = [phone, phone2, phone3];
+
+let ul = document.getElementById('phone_list');
+let iterator = 0;
 function setPhoneToList(phone) {
 	let inAvailability;
 	if(phone.availability === true)
@@ -45,9 +47,8 @@ function setPhoneToList(phone) {
 	ul.innerHTML += li;	
 }
 
-setPhoneToList(phone);
-setPhoneToList(phone2);
-setPhoneToList(phone3);
+for(let phone of phoneList)
+	setPhoneToList(phone);
 
 function openDetailPage(phoneId){	
 	sessionStorage.setItem("phone", JSON.stringify(phoneId));	
@@ -55,12 +56,12 @@ function openDetailPage(phoneId){
 	content.innerHTML = '<object type="text/html" data="MobileDescription.html" style="width:100%; height:100vh;"></object>';		
 }
 
-var i = sessionStorage.getItem('count') != null? sessionStorage.getItem('count'): 0;
+let i = sessionStorage.getItem('count') != null? sessionStorage.getItem('count'): 0;
 
 function addToBasket(phoneId,event){		
 	sessionStorage.setItem("phone" + i,JSON.stringify(phoneId));
 	phoneId.inBasket = true;	
-	let basket_buttons = event.target.parentElement.parentElement.parentElement.getElementsByClassName('phone-container__toBasket');
+	let basket_buttons = event.target.closest('li').getElementsByClassName('phone-container__toBasket');
 	for(let j = 0; j < basket_buttons.length; j++){	
 		basket_buttons[j].setAttribute("disabled","true");	
 		basket_buttons[j].setAttribute("value", "В корзине");		

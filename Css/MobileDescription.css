@@ -90,10 +90,10 @@ body {
 	}
 
 	.phone-container__phone-characteristics {	
-		position: absolute;
+		/*position: absolute;
 		top: 800px;
 		left: 5px;		
-		font-size: 22px;	
+		font-size: 22px;	*/
 	}
 
 	.phone-container__phone-characteristics table th {	
