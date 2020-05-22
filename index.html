@@ -2,7 +2,12 @@
 <html>
 <head>
 	<title>Интернет магазин</title>	
-	<link rel="stylesheet" href="Css/Index.css">	
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="Css/Index.css">
+	<link rel="stylesheet" href="Css/Home.css">
+	<link rel="stylesheet" href="Css/Basket.css">
+	<link rel ="stylesheet" href="Css/MobileDescription.css">	
+	<link rel ="stylesheet" href="Css/FilterMobileVersion.css">
 </head>
 <body>
 	<div id=blackout>	
@@ -45,15 +50,20 @@
 	</div>
 	<nav>
 		<ul class="menu">
-			<li><a id=goHome class="menu__ref"  onclick="changeContent(this)">Интернет-магазин</a></li>
+			<li><a id=goHome class="menu__ref"  onclick="onNavigate('/home')">Интернет-магазин</a></li>
 			<div class="menu__enter-and-basket">
-				<li><a id=goBasket class="menu__ref" onclick="changeContent(this)">Корзина</a></li>
+				<li><a id=goBasket class="menu__ref" onclick="onNavigate('/basket')">Корзина</a></li>
 				<li><a id=goLogin class="menu__ref" onclick="changeModalWindow(this)" href = "#blackout">Войти</a></li>			
 			</div>	
 		</ul>
 	</nav>
-	<div id=content>
-	</div>	
-	<script src="Js/Index.js"></script>
+	<main id=content>
+	</main>
+	<script src="Js/HomePage.js"></script>
+	<script src="Js/BasketPage.js"></script>
+	<script src="Js/FilterPage.js"></script>
+	<script src="Js/MobileDescriptionPage.js"></script>
+	<script src="Js/Index.js"></script>		
+	<script src="Js/Router.js"></script>	 
 </body>
 </html>

@@ -1,8 +1,15 @@
-const table = document.getElementById('phoneTable');
-let total_price = 0;
+if(sessionStorage.getItem('_basket') === null){
+	var table = document.getElementById('phoneTable');
+	var total_price;
+	var choosePhone;
+	var chooseAllPhones;
+}
+
+total_price = 0;	
 function initBasket(){
 	let phone;
 	let count = sessionStorage.getItem("count");
+	console.log(count);	
 	let ul = document.getElementById('phoneBasketInMobileVersion');
 	if(count === null || count === 0)	{
 		document.getElementById('basket-content').style.display = "none";
@@ -17,7 +24,7 @@ function initBasket(){
 			let element = '<td><label class="phones-in-basket__checkbox-style">';
 			element += '<input type="checkbox" name="choose_phone" value="true" onclick="phoneCheckboxClick(this)" checked>';
 			element += '<span class="phones-in-basket__checkmark"></span></label></td><td><div class="phones-in-basket__name-and-photo">';
-			element += '<img id=phonePhoto src=' + phone.photo_path + ' height="80">';
+			element += '<img class="phonePhotoinBasket" src=' + phone.photo_path + ' height="80">';
 			element += '<a class="phones-in-basket__phoneName" onclick=phoneDetails(' +phone.id+')>' + phone.full_name + '</a></div></td>';
 			element += '<td><input id=count type="number" name="count" min="0" value="1"></td><td><span >Курьером: </span>';
 			element += '<span>завтра</span></td><td><span id=price>' + phone.price + ' р.</span></td>';			
@@ -36,18 +43,13 @@ function initBasket(){
 	}
 }
 
-function backToHome(){	
-	let content = sessionStorage.getItem("content");	
-	content.innerHTML = '<object type="text/html" data="Home.html" style="width:100%; height:200vh;"></object>';
-}
+choosePhone = document.getElementsByName("choose_phone");
+chooseAllPhones = document.getElementsByName("choose_all_phones");
 
 function phoneDetails(phoneId){
-	let content = document.getElementById('content');
-	content.innerHTML = '<object type="text/html" data="MobileDescription.html" style="width:100%; height:100%;"></object>';
+	sessionStorage.setItem("phone", JSON.stringify(phoneId));	
+	onNavigate('/phone');	
 }
-
-let choosePhone = document.getElementsByName("choose_phone");
-let chooseAllPhones = document.getElementsByName("choose_all_phones");
 
 function headCheckboxClick(checkbox) {		
 	if(checkbox.checked){

@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-body{
-	background-color: #eee8aa;		
-	font-family: 'Roboto', sans-serif;
-	overflow: hidden;	
-	margin: 0px;
-	position: relative;
-	bottom: 20px;
-}
-
 @media screen and (min-device-width: 769px) {
 
 	#filter, .phone-container__result-tools-for-mobile-version{

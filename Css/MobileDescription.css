@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-body {
-	background-color: #eee8aa;
-	font-family: 'Roboto', sans-serif;
-	margin: 0px;	
-}
-
 @media screen and (min-device-width: 768px) {
-	.phone-container__phone-photo {
+	.phone-container-in-description__phone-photo {
 		width: 35%;
+	}
+
+	.phone-container-in-description__phone-characteristics-in-mobile-version {
+		display: none;
 	}
 
 	#phonePhoto {	
@@ -16,11 +14,11 @@ body {
 		height: 400px;
 	}
 
-	.phone-container__result-tools {
+	.phone-container-in-description__result-tools {
 		flex-direction: row;
 	}
 
-	.phone-container__price {
+	.phone-container-in-description__price {
 		font-size: 25px;
 	}
 
@@ -31,7 +29,11 @@ body {
 		font-size: 16px;
 	}
 
-	.phone-container__phone-characteristics table th {
+	.phone-container-in-description__phone-characteristics {
+		display: grid;
+	}
+
+	.phone-container-in-description__phone-characteristics table th {
 		font-size: 17px;
 	}
 
@@ -48,21 +50,22 @@ body {
 
 @media screen and (max-device-width: 768px) {
 
-	h1 {
+	.title {
 		font-size: 50px;
 	}
 
-	.phone-container__phone-photo {
+	.phone-container-in-description__phone-photo {
 		width: 60%;
 		margin-right: 50px;
 	}
 	
 	#phonePhoto {
 		height: 600px ;
+		width: 320px;
 		border-radius: 40px ;
 	}
 
-	.phone-container__result-tools {	
+	.phone-container-in-description__result-tools {	
 		flex-direction: column;		
 	}
 
@@ -77,7 +80,7 @@ body {
 		font-size: 30px;
 	}
 
-	.phone-container__price {
+	.phone-container-in-description__price {
 		font-size: 40px;
 	}	
 
@@ -89,19 +92,22 @@ body {
 		margin-top: 40px;
 	}
 
-	.phone-container__phone-characteristics {	
-		/*position: absolute;
-		top: 800px;
-		left: 5px;		
-		font-size: 22px;	*/
+	.phone-container-in-description__phone-characteristics {		
+		display: none;	
 	}
 
-	.phone-container__phone-characteristics table th {	
+	.phone-container-in-description__phone-characteristics-in-mobile-version {
+		display: grid;
+		font-size: 22px;
+		left: 5px;
+	}
+
+	.phone-container-in-description__phone-characteristics-in-mobile-version table th {	
 		font-size: 25px;		
 	}
 }
 
-h1 {
+.title {
 	color: #1e90ff;	
 	padding-left: 40px;
 	word-wrap: break-word;
@@ -117,41 +123,40 @@ h1 {
 	margin-left: 50px;	
 }
 
-.phone-container {
+.phone-container-in-description {
 	display: flex;	
 }
 
-.phone-container__phone-detail {
+.phone-container-in-description__phone-detail {
 	width: 75%;
 }
 
-.phone-container__price-and-available {
+.phone-container-in-description__price-and-available {
 	display: flex;
 	flex-direction: column;
 	margin-right: 50px;
 }
 
-.phone-container__result-tools {
+.phone-container-in-description__result-tools {
 	display: flex;		
 }
 
-.phone-container__phone-characteristics {
+.phone-container-in-description__phone-characteristics, .phone-container-in-description__phone-characteristics-in-mobile-version {
 	margin-top: 50px;
-	display: grid;
 	grid-template-columns: 50% 50%;	
 }
 
-.phone-container__phone-characteristics table {	
+.phone-container-in-description__phone-characteristics table, .phone-container-in-description__phone-characteristics-in-mobile-version table {	
 	margin-bottom: 20px;
 	width: 100%;		
 	word-wrap: break-word;
 }
 
-.phone-container__phone-characteristics table th {
+.phone-container-in-description__phone-characteristics table th, .phone-container-in-description__phone-characteristics-in-mobile-version table th {
 	text-align: justify;			
 }
 
-.phone-container__phone-characteristics table td {
+.phone-container-in-description__phone-characteristics table td, .phone-container-in-description__phone-characteristics-in-mobile-version table td {
 	width: 210px;		
 }
 
@@ -166,7 +171,7 @@ h1 {
 	background-color: #308a40;	
 }
 
-.phone-container__price {	
+.phone-container-in-description__price {	
 	font-weight: bold;	
 }
 

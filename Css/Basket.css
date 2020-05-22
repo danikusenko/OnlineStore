@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-body {
-	background-color: #eee8aa;	
-	font-family: 'Roboto', sans-serif;
-	margin: 0px;
-}
-
 @media screen and (min-device-width: 769px){
 
 	.phones-in-basket__phoneName {
@@ -37,6 +31,10 @@ body {
 
 	h1 {
 		font-size: 40px;
+	}
+
+	h2{
+		font-size: 30px;
 	}
 
 	.phones-in-basket-for-mobile-version {	
@@ -89,7 +87,7 @@ body {
 		margin-bottom: 10px;
 	}
 
-	.phones-in-basket, h2{
+	.phones-in-basket/*, h2*/{
 		display: none;
 	}
 
@@ -121,7 +119,6 @@ body {
 		inset rgba(0,0,0,.6) 0 -3px 8px,
 		inset rgba(252,255,255,.7) 0 3px 8px,
 		rgba(0,0,0,.8) 0 3px 8px -3px;
-		/*margin: 1em auto;*/
 		width: 350px;
 		padding: 15px;
 		border-radius: 10px;
@@ -243,7 +240,7 @@ input[type="checkbox"] {
 	text-decoration: none;
 }
 
-.phonePhoto {
+.phonePhotoinBasket {
 	border-radius: 5px;
 }
 

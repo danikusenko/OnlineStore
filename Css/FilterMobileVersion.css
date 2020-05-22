@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
 @media screen and (max-device-width: 768px) {
-	body{
+	#body{
 		background-color: #dcdcdc;		
 		font-family: 'Roboto', sans-serif;
-		font-size: 40px;		
+		font-size: 40px;
+		margin: -8px;		
 	}
 	h1 {
 		font-size: 40px;
@@ -27,13 +28,13 @@
 		background-size: 60px;
 	}
 
-	.flex-container__filter-block {
+	.flex-container-in-filter__filter-block {
 		padding: 0px;
 		display: flex;
 		flex-direction: column;
 	}
 
-	.flex-container__inputs-to-row {
+	.flex-container-in-filter__inputs-to-row {
 		display: flex;
 		flex-direction: row;
 		margin-bottom: 20px;
@@ -57,7 +58,7 @@
 		display: none;		
 	}
 
-	.flex-container__checkbox-style {
+	.flex-container-in-filter__checkbox-style {
 		display: block;  
 		 position: relative;
 	  	padding-left: 60px;
@@ -70,7 +71,7 @@
 	  	user-select: none; 	  	
 	}
 
-	.flex-container__checkmark {
+	.flex-container-in-filter__checkmark {
 	  position: absolute;
 	  top: 0;
 	  left: 0;
@@ -81,21 +82,21 @@
 	  border: 1px #a6a6a6 solid;	  	   
 	}
 
-	.flex-container__checkbox-style input:checked ~ .flex-container__checkmark {
+	.flex-container-in-filter__checkbox-style input:checked ~ .flex-container-in-filter__checkmark {
 	  background-color: #ff8c00;
 	}
 
-	.flex-container__checkmark:after {
+	.flex-container-in-filter__checkmark:after {
 	  content: "";
 	  position: absolute;
 	  display: none;
 	}
 
-	.flex-container__checkbox-style input:checked ~ .flex-container__checkmark:after  {
+	.flex-container-in-filter__checkbox-style input:checked ~ .flex-container-in-filter__checkmark:after  {
 	  display: block;
 	}
 
-	.flex-container__checkmark:after {
+	.flex-container-in-filter__checkmark:after {
 	  left: 15px;
 	  top: 3px;
 	  width: 15px;

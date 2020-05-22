@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>	
-	<link rel="stylesheet" href="../Css/Home.css">	
-</head>
-<body>
-	<div id="phones-content">
+const home = `
+<div id="phones-content">
 	<div class="title-and-filter-button">
 		<h1 id=title>Мобильные телефоны</h1>
-		<a id="filter" href="FilterMobileVersion.html">Фильтр</a>
+		<a id="filter" onclick="onNavigate('/filter')">Фильтр</a>
 	</div>
 	<div class="flex-container">
 		<div class="flex-container__filter-phones">
@@ -161,8 +156,5 @@
 			<ul id=phone_list class="phone-container__model-list">				
 			</ul>
 		</div>
-	</div>		
-	<script src="../Js/Home.js"></script>
-</div>
-</body>
-</html>
+	</div>
+</div>`
