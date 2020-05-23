@@ -20,7 +20,7 @@ const phone_description = `
 					</tr>					
 					<tr>
 						<td>Тип устройства</td>
-						<td>Mobile.Type</td>						
+						<td class="phone-container-in-description__type">Mobile.Type</td>						
 					</tr>
 					<tr>
 						<td>Платформа</td>
@@ -37,11 +37,11 @@ const phone_description = `
 					</tr>
 					<tr>
 						<td>Цвет корпуска</td>
-						<td>Mobile.BodyColor</td>
+						<td class="phone-container-in-description__body-color">Mobile.BodyColor</td>
 					</tr>
 					<tr>
 						<td>Материал корпуса</td>
-						<td>Mobile.BodyMaterial</td>						
+						<td class="phone-container-in-description__body-material">Mobile.BodyMaterial</td>						
 					</tr>					
 				</table>	
 				<table>
@@ -50,12 +50,12 @@ const phone_description = `
 					</tr>
 					<tr>
 						<td>Процессор</td>
-						<td>Mobile.Processor</td>
+						<td class="phone-container-in-description__processor">Mobile.Processor</td>
 					</tr>
 					</tr>
 					<tr>
-						<td>Частота процессора, МГц</td>
-						<td>Mobile.CPUfrequency</td>
+						<td>Количество ядер процессора</td>
+						<td class="phone-container-in-description__number-of-cores">Mobile.Cores</td>
 					</tr>
 				</table>
 				<table>
@@ -64,16 +64,16 @@ const phone_description = `
 					</tr>
 					<tr>
 						<td>Разрешение экрана</td>
-						<td>Mobile.ScreenКesolution</td>
+						<td class="phone-container-in-description__screen-resolution">Mobile.ScreenResolution</td>
 					</tr>
 					</tr>
 					<tr>
 						<td>Соотношение сторон экрана </td>
-						<td>Mobile.ScreenAspectRatio</td>						
+						<td class="phone-container-in-description__screen-aspect-ratio">Mobile.ScreenAspectRatio</td>						
 					</tr>
 					<tr>
 						<td>Технология экрана</td>
-						<td>Mobile.ScreenTechnology</td>	
+						<td class="phone-container-in-description__screen-technology">Mobile.ScreenTechnology</td>	
 					</tr>
 				</table>	
 				<table>
@@ -91,7 +91,7 @@ const phone_description = `
 					</tr>
 					<tr>
 						<td>Поддержка карт памяти</td>
-						<td>Mobile.MemoryCardSupport</td>	
+						<td class="phone-container-in-description__memory-card-support">Mobile.MemoryCardSupport</td>	
 					</tr>
 				</table>	
 				<table>
@@ -100,16 +100,16 @@ const phone_description = `
 					</tr>
 					<tr>
 						<td>Акселерометр</td>
-						<td>Mobile.Accelerometer</td>
+						<td class="phone-container-in-description__accelerometer">Mobile.Accelerometer</td>
 					</tr>
 					</tr>
 					<tr>
 						<td>Датчик освещенности</td>
-						<td>Mobile.LightSensor</td>						
+						<td class="phone-container-in-description__light-sensor">Mobile.LightSensor</td>						
 					</tr>
 					<tr>
 						<td>Датчик приближения</td>
-						<td>Mobile.ProximitySensor</td>	
+						<td class="phone-container-in-description__proximity-sensor">Mobile.ProximitySensor</td>	
 					</tr>
 				</table>
 			</div>

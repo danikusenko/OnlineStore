@@ -22,7 +22,7 @@ const basket = `<div id="basket-empty">
 	<ul id="phoneBasketInMobileVersion" class="phones-in-basket-for-mobile-version">			
 	</ul>
 	<div class="basket-footer">
-		<a id=goBack onclick="getPage('index.html')">Вернуться на главную</a>
+		<a id=goBack onclick="onNavigate('/home')">Вернуться на главную</a>
 		<div class="basket-footer__cost-and-checkout">
 			<div>
 				<span>Общая стоимость:&nbsp;</span>
