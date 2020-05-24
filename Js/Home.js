@@ -27,6 +27,7 @@ function openDetailPage(phoneId){
 function addToBasket(phoneId,event){	
 	let count = basket_of_goods.length;		
 	basket_of_goods.push(phoneId);
+	sessionStorage.setItem('basket_goods', JSON.stringify(basket_of_goods));
 	let basket_buttons = event.target.closest('li').getElementsByClassName('phone-container__toBasket');
 	for(let j = 0; j < basket_buttons.length; j++){	
 		basket_buttons[j].setAttribute("disabled","true");	

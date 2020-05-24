@@ -37,4 +37,4 @@ let phone3 = new MobilePhone("phone3","Apple iPhone Xr 64Gb Red", "Images/Phone3
 	599.99, true, 'Cмартфон','Красный', 'Металл/стекло', 'Apple A12 Bionic', '6 (2+4)', '1792×828', '19.5:9', 'IPS', 
 	'нет','есть', 'есть', 'есть');
 let phoneList = [phone, phone2, phone3]; 
-let basket_of_goods = [];	
+let basket_of_goods = JSON.parse(sessionStorage.getItem('basket_goods')) === null ? []: JSON.parse(sessionStorage.getItem('basket_goods'));	
