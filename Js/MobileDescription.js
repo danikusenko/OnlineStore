@@ -8,8 +8,16 @@ function setProperty(class_name, value){
 	}	
 }
 
+function isInBaket(phoneId){
+	for(let phone of basket_of_goods){
+		if(phone.id === phoneId)
+			return true;
+	}
+	return false;
+}
+
 function viewPhone(){
-	let phone = JSON.parse(sessionStorage.getItem('phone'));
+	let phone = JSON.parse(sessionStorage.getItem('phone'));	
 	if(phone.availability == true){
 		document.getElementById('inStock').style.display = "block";
 		document.getElementById('notAvailable').style.display = "none";
@@ -38,21 +46,20 @@ function viewPhone(){
 	setProperty('phone-container-in-description__light-sensor',phone.light_sensor);
 	setProperty('phone-container-in-description__proximity-sensor',phone.proximity_sensor);
 	setCharactersitiscsForMobileVersion();
-	let basket_button = document.getElementById('toBasket');
-	if(phone.inBasket === true){
+	let basket_button = document.getElementById('toBasket');	
+	if(isInBaket(phone.id)){
 		setClickedButton(basket_button);		
 	}
 	else {
-		basket_button.addEventListener('click',function(){
-			phone.inBasket = true;
-			setClickedButton(basket_button);
-			sessionStorage.setItem("phone" + i,JSON.stringify(phoneId));
-			sessionStorage.setItem("count", ++i);
+		basket_button.addEventListener('click',function(){			 			
+			basket_of_goods.push(phone);			
+			sessionStorage.setItem("buttons-"+ (basket_of_goods.length-1),"toBasket-"+ phone.id);
+			setClickedButton(basket_button);			
 		});
 	}
 }
 
-function setClickedButton(basket_button){
+function setClickedButton(basket_button){	
 	basket_button.setAttribute("value", "В корзине");		
 	basket_button.style.backgroundColor = "#ffffff";
 	basket_button.style.color = "#42b857";
@@ -64,19 +71,5 @@ function setCharactersitiscsForMobileVersion(){
 	let characteristicsDiv = document.getElementsByClassName('phone-container-in-description__phone-characteristics')[0];
 	characteristicsForMobile.innerHTML = characteristicsDiv.innerHTML; 
 }
-
-/*function addToBasket(phoneId,event){	
-	sessionStorage.setItem("phone" + i,JSON.stringify(phoneId));
-	console.log('event:'+this);	
-	let basket_buttons = this.parentElement.parentElement.parentElement.getElementsByClassName('phone-container__toBasket');
-	console.log(basket_buttons[0]);	
-	for(let j = 0; j < basket_buttons.length; j++){		
-		basket_buttons[j].setAttribute("value", "В корзине");		
-		basket_buttons[j].style.backgroundColor = "#ffffff";
-		basket_buttons[j].style.color = "#42b857";
-	}
-	sessionStorage.setItem("buttons"+i,basket_buttons[0].getAttribute("name"));	
-	sessionStorage.setItem("count", ++i);	
-}*/
 
 viewPhone()

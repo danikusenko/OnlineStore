@@ -1,26 +1,18 @@
-if(sessionStorage.getItem('_basket') === null){
-	var table = document.getElementById('phoneTable');
-	var total_price;
-	var choosePhone;
-	var chooseAllPhones;
-}
-
-total_price = 0;	
 function initBasket(){
+	const table = document.getElementById('phoneTable');
+	let total_price = 0;
 	let phone;
-	let count = sessionStorage.getItem("count");
-	console.log(count);	
+	let count = basket_of_goods.length;
 	let ul = document.getElementById('phoneBasketInMobileVersion');
-	if(count === null || count === 0)	{
+	if(basket_of_goods.length === 0) {
 		document.getElementById('basket-content').style.display = "none";
 		document.getElementById('basket-empty').style.display = "block";		
 	}
 	else{
 		document.getElementById('basket-content').style.display = "block";
 		document.getElementById('basket-empty').style.display = "none";
-		for(let i = 0; i < count; i++){
-			let row = table.insertRow(1);
-			phone = JSON.parse(sessionStorage.getItem("phone" + i));						
+		for(phone of basket_of_goods){
+			let row = table.insertRow(1);									
 			let element = '<td><label class="phones-in-basket__checkbox-style">';
 			element += '<input type="checkbox" name="choose_phone" value="true" onclick="phoneCheckboxClick(this)" checked>';
 			element += '<span class="phones-in-basket__checkmark"></span></label></td><td><div class="phones-in-basket__name-and-photo">';
@@ -43,15 +35,15 @@ function initBasket(){
 	}
 }
 
-choosePhone = document.getElementsByName("choose_phone");
-chooseAllPhones = document.getElementsByName("choose_all_phones");
+
 
 function phoneDetails(phoneId){
 	sessionStorage.setItem("phone", JSON.stringify(phoneId));	
 	onNavigate('/phone');	
 }
 
-function headCheckboxClick(checkbox) {		
+function headCheckboxClick(checkbox) {	
+	let choosePhone = document.getElementsByName("choose_phone");	
 	if(checkbox.checked){
 		for(var i = 0; i<choosePhone.length; i++)
 			choosePhone[i].checked = true;		
@@ -64,6 +56,8 @@ function headCheckboxClick(checkbox) {
 }
 
 function phoneCheckboxClick(checkbox) {
+	let choosePhone = document.getElementsByName("choose_phone");
+	let chooseAllPhones = document.getElementsByName("choose_all_phones");
 	if(!checkbox.checked){	
 		let noСheckboxesSelected = true;
 		for(var i = 0; i<choosePhone.length; i++){
