@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body{
+	background-color: #eee8aa;		
+	font-family: 'Roboto', sans-serif;	
+}
+
+@media screen and (min-device-width: 769px) {
+	.menu {
+		height: 40px;
+	}
+
+	.menu__ref {
+		font-size: 18px;
+		padding: 10px 15px;
+	}
+
+	input[type="email"], input[type="password"] {
+		margin: 5px;
+		width: 300px;
+		height: 30px;
+		font-size: 14px;
+	}
+
+	#login_button, #buttonForReset, #buttonForRegistration  {		
+		width: 120px;
+		height: 45px;
+		border-radius: 7px;		
+		font-size: 13px;				
+	}
+
+	.close-icon {
+		width: 25px;
+		height: 25px;
+		background-size: 25px !important;
+	}
+
+	.back-icon {
+		width: 20px;
+		height: 20px;
+		background-size: 20px !important;
+	}
+
+	#login {
+		width: 370px;
+		height: 335px;
+		border: 3px solid #ffffff;
+	}
+
+	#resetPassword, #registration {
+		width: 370px;
+		height: 200px;
+		border: 3px solid #ffffff;
+	}
+}
+
+@media screen and (max-device-width: 768px) {
+	.menu {
+		height: 80px;
+	}
+
+	.menu__ref {
+		font-size: 36px;
+		padding: 18px;
+	}
+
+	#login, #registration, #resetPassword {
+		width: 100%;
+		height: 100%;
+		border-width: 0px;
+		z-index: 2;		
+	}
+
+	.form {
+		padding-top: 40%;
+	}
+
+	.form__title {
+		font-size: 60px;
+	}
+
+	input[type="email"], input[type="password"] {
+		margin: 15px;		
+		width: 600px;
+		height: 75px;
+		font-size: 30px;
+		border: 1px solid grey;
+	}
+
+	input[type="checkbox"]:hover {
+		background-color: blue;
+	}
+
+	.close-icon {
+		height: 60px;
+		width: 60px;
+		background-size: 60px;
+	}
+
+	.back-icon {
+		height: 60px;
+		width: 60px;
+		background-size: 60px;
+	}
+	
+	#login_button, #buttonForReset, #buttonForRegistration  {		
+		width: 220px;
+		height: 90px;
+		border-radius: 15px;		
+		font-size: 30px;				
+	}
+
+	.form__ref-in-form {		
+		font-size: 30px;
+	}
+}
+
+.menu {
+	background: #262626;	
+	border-radius: 7px;		
+}
+
+
+.menu__ref {		
+	display: flex;
+	color: #ffa500;			
+	text-decoration: none;	
+	text-align: center;		
+}
+
+.menu__ref:hover {
+	color: #ff80af;	
+}
+
+ul.menu li {	
+	list-style-type: none; 
+	display: inline-flex;	
+}
+
+.menu__enter-and-basket {
+	position: absolute;
+	right: 25px;
+	top: 15px;
+}
+
+a {
+	cursor: pointer;
+}
+
+#blackout {
+	background: rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;      
+    z-index: 1;
+}
+
+#blackout:target {
+	display: block;	
+}
+
+.close-icon {
+	position: absolute;
+	cursor: pointer;	
+	top: 0px;
+	right: 0px;	
+	background: url("../Images/close.png") no-repeat;	
+}
+
+.back-icon {
+	position: absolute;
+	cursor: pointer;
+	top: 3px;
+	left: 3px;
+	background: url("../Images/back.png") no-repeat;
+}
+
+#login {	
+	text-align: center;	
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background-color: #ffffff;	
+    border-radius: 10px;         
+}
+
+form{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;	
+	align-items: center;		
+}
+
+.form__ref-in-form {
+	margin-top: 10px;
+	text-decoration: none;
+	color: #0077cc;	
+}
+
+.form__ref-in-form:hover {
+	color: #dc133c;
+}
+
+#resetPassword, #registration {	
+	text-align: center;	
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background-color: #ffffff;	
+    border-radius: 10px;
+    display: none;
+}
+
+#login_button, #buttonForReset, #buttonForRegistration  {
+	background-color: #0077cc;
+	color: #ffffff;
+	border-width: 0px;	
+	font-weight: bold;	
+	cursor: pointer;
+	margin-bottom: 10px;
+	margin-top: 15px;
+}
+
