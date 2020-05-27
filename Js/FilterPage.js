@@ -2,11 +2,11 @@ const filterPage = `
 	<div id="body">
 	<div class="title-and-close">		
 		<h1>Подробный фильтр</h1>
-		<a class="title-and-close__close-icon" onclick="onNavigate('/home')"></a>
+		<a class="title-and-close__close-icon" href="#"></a>
 	</div>
 	<div class="flex-container-in-filter">
 		<div class="flex-container-in-filter__filter-phones">
-			<form action="http://OnlineStore/filter" method="post">
+			<form id="filterFormMobileVersion" onsubmit="document.getElementById('filterForm').reset(); initHomePage(); return false;">
 				<div class="flex-container-in-filter__filter-block">
 					<span class="flex-container-in-filter__filter-block-option-title">Цена, б.р.</span>
 					<div class="flex-container-in-filter__inputs-to-row">
@@ -14,7 +14,7 @@ const filterPage = `
 						<input class="flex-container-in-filter__input-gap" type="number" name="toPrice" placeholder="до">	
 					</div>					
 					<label class="flex-container-in-filter__option-title" for="wordsPhoneName">Слова в названии</label>
-					<input id=wordsPhoneName type="text" name="wordsPhoneName"><br>
+					<input type="text" name="wordsPhoneName"><br>
 					<details open>
 						<summary><span class="flex-container-in-filter__filter-block-option-title">Производитель</span></summary>
 							<label class="flex-container-in-filter__checkbox-style">Samsung
@@ -63,7 +63,7 @@ const filterPage = `
 					</details><br>
 					<details open>				
 						<summary><span class="flex-container-in-filter__option-title">Количество SIM-карт</span></summary>
-							<input id=simCards type="number" name="simCards" 
+							<input type="number" name="simCards" 
 							min="1" max="4"><br>												
 					</details><br>	
 					<details open>
@@ -128,23 +128,8 @@ const filterPage = `
 								<input class="input-gap" type="number" name="fromDiagonal" placeholder="от">
 								<input class="input-gap" type="number" name="toDiagonal" placeholder="до">	
 							</div>							
-					</details><br>
-					<details open>				
-						<summary><span class="flex-container-in-filter__option-title">Аккумулятор</span></summary>
-							<label>
-								<input type="radio" name="battery" 
-								value="noMatter" checked>Не важно
-							</label><br>
-							<label>							
-								<input type="radio" name="battery" 
-								value="nonRemovable">Несъемный
-							</label><br>
-							<label>
-								<input type="radio" name="battery" 
-								value="removable">Съёмный
-							</label><br>									
-					</details><br><br>		
-					<input id="searchPhones" type="submit" name="searchPhones" value="Найти телефоны">
+					</details><br><br>						
+					<input type="submit" name="searchPhones" value="Найти телефоны" onclick="location.href='#';">
 				</div>
 			</form>
 		</div>

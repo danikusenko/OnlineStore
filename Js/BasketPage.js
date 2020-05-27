@@ -7,12 +7,6 @@ const basket = `<div id="basket-empty">
 	<h2>Список товаров</h2>
 	<div class="phones-in-basket">		
 		<table id="phoneTable">
-			<th>
-				<label class="phones-in-basket__checkbox-style">
-					<input type="checkbox" name="choose_all_phones" onclick="headCheckboxClick(this)" value="true" checked>
-					<span class="phones-in-basket__checkmark"></span>
-				</label>
-			</th>
 			<th>Мобильный телефон</th>
 			<th>Количество</th>
 			<th>Доставка</th>

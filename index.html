@@ -8,13 +8,14 @@
 	<link rel="stylesheet" href="Css/Basket.css">
 	<link rel ="stylesheet" href="Css/MobileDescription.css">	
 	<link rel ="stylesheet" href="Css/FilterMobileVersion.css">
+
 </head>
 <body>
 	<div id=blackout>	
 		<div id=login>
 			<div class="form">
 				<h1 class="form__title">Вход</h1>
-				<form action="http://OnlineStore/Login" method="post" >				
+				<form>				
 					<input id=email type="email" name="email" placeholder="Адрес электронной почты">
 					<input id=password type="password" name="password" placeholder="Пароль" maxlength="16">
 					<input id=login_button type="submit" name="login" value="Войти">
@@ -27,7 +28,7 @@
 		<div id=resetPassword>
 			<div class="form">
 				<h1 class="form__title">Сброс пароля</h1>
-				<form action="http://OnlineStore/ResetPassword" method="post">
+				<form>
 					<input id="emailForReset" type="email" name="emailForReset" placeholder="Адрес электронной почты">
 					<input id=buttonForReset type="submit" name="buttonForReset" value="Продолжить">
 				</form>	
@@ -38,33 +39,42 @@
 		<div id=registration>
 			<div class="form">
 			<h1 class="form__title">Регистрация</h1>
-				<form action="http://OnlineStore/Registration" method="post">
+				<form>
 					<input id="emailForRegistration" type="email" name="emailForRegistration" 
 					placeholder="Адрес электронной почты">
+					<input id="passwordForRegistration" type="password" name="passwordForRegistration" 
+					placeholder="Пароль">
 					<input id=buttonForRegistration type="submit" name="buttonForRegistration" value="Продолжить">
 				</form>
 			</div>
 			<a class="back-icon" onclick="changeModalWindow(this)"></a>
 			<a class="close-icon" href="#"></a>
 		</div>
+		<div id=filterPage></div>
 	</div>
 	<nav>
 		<ul class="menu">
 			<li><a id=goHome class="menu__ref"  onclick="onNavigate('/home')">Интернет-магазин</a></li>
 			<div class="menu__enter-and-basket">
 				<li><a id=goBasket class="menu__ref" onclick="onNavigate('/basket')">Корзина</a></li>
-				<li><a id=goLogin class="menu__ref" onclick="changeModalWindow(this)" href = "#blackout">Войти</a></li>			
+				<li><a id=goLogin class="menu__ref" onclick="changeModalWindow(this)" href = "#blackout">Войти</a></li>
+				<li><a id=logout class="menu__ref">Выйти</a></li>		
 			</div>	
 		</ul>
-	</nav>
+	</nav>	
 	<main id=content>
 	</main>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-database.js"></script>	
+	<script src="Js/Config.js"></script>
+	<script src="Js/DatabaseOperations.js"></script>
+	<script src="Js/Authefication.js"></script>
 	<script src="Js/HomePage.js"></script>
 	<script src="Js/BasketPage.js"></script>
 	<script src="Js/FilterPage.js"></script>
 	<script src="Js/MobileDescriptionPage.js"></script>
-	<script src="Js/Index.js"></script>
-	<script src="Js/Model.js"></script>		
+	<script src="Js/Index.js"></script>		
 	<script src="Js/Router.js"></script>	 
 </body>
 </html>

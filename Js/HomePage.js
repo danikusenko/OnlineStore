@@ -2,19 +2,19 @@ const home = `
 <div id="phones-content">
 	<div class="title-and-filter-button">
 		<h1 id=title>Мобильные телефоны</h1>
-		<a id="filter" onclick="onNavigate('/filter')">Фильтр</a>
+		<a id="filter" onclick="changeModalWindow(this)" href="#blackout">Фильтр</a>
 	</div>
 	<div class="flex-container">
 		<div class="flex-container__filter-phones">
-			<form action="http://OnlineStore/filter" method="post">
+			<form id="filterForm">
 				<div class="flex-container__filter-block">
 					<span class="flex-container__filter-block-option-title">Цена, б.р.</span>
 					<div class="flex-container__inputs-to-row">
 						<input class="flex-container__input-gap" type="number" name="fromPrice" placeholder="от" min="1">
-						<input class="flex-container__input-gap" type="number" name="toPrice" placeholder="до">	
+						<input class="flex-container__input-gap" type="number" name="toPrice" placeholder="до" min="1">	
 					</div>	
 					<span class="flex-container__filter-block-option-title">Слова в названии</span>
-					<input id=wordsPhoneName type="text" name="wordsPhoneName"><br>
+					<input type="text" name="wordsPhoneName"><br>
 					<details open>
 						<summary><span class="flex-container__filter-block-option-title">Производитель</span></summary>
 							<label class="flex-container__checkbox-style">Samsung
@@ -63,7 +63,7 @@ const home = `
 					</details><br>
 					<details open>
 						<summary><span class="flex-container__filter-block-option-title">Количество SIM-карт</span></summary>
-							<input id=simCards type="number" name="simCards" 
+							<input type="number" name="simCards" 
 							min="1" max="4"><br>												
 					</details><br>	
 					<details open>
@@ -92,7 +92,12 @@ const home = `
 								<input type="checkbox" name="RAM" 
 								value="4">	
 								<span class="flex-container__checkmark"></span>
-							</label>								
+							</label>
+							<label class="flex-container__checkbox-style">2 Гб
+								<input type="checkbox" name="RAM" 
+								value="2">	
+								<span class="flex-container__checkmark"></span>
+							</label>									
 					</details><br>
 					<details open>
 						<summary><span class="flex-container__filter-block-option-title">Встроенная память</span></summary>
@@ -120,7 +125,12 @@ const home = `
 								<input type="checkbox" name="builtInMemory" 
 								value="64">
 								<span class="flex-container__checkmark"></span>
-							</label>									
+							</label>	
+							<label class="flex-container__checkbox-style">32 Гб
+								<input type="checkbox" name="builtInMemory" 
+								value="32">
+								<span class="flex-container__checkmark"></span>
+							</label>								
 					</details><br>
 					<details open>
 						<summary><span class="flex-container__filter-block-option-title">Диагональ экрана, "</span></summary>
@@ -132,23 +142,8 @@ const home = `
 									<input class="flex-container__input-gap" type="number" name="toDiagonal" placeholder="до">
 								</label>	
 							</div>							
-					</details><br>
-					<details open>				
-						<summary><span class="flex-container__filter-block-option-title">Аккумулятор</span></summary>
-							<label>
-								<input type="radio" name="battery" 
-								value="noMatter" checked >Не важно
-							</label><br>
-							<label>
-								<input type="radio" name="battery" 
-								value="nonRemovable">Несъемный
-							</label><br>
-							<label>
-								<input type="radio" name="battery" 
-								value="removable">Съёмный
-							</label><br>									
-					</details><br>		
-					<input id="searchPhones" type="submit" name="searchPhones" value="Найти телефоны">
+					</details><br>						
+					<input type="submit" name="searchPhones" value="Найти телефоны">
 				</div>
 			</form>
 		</div>
