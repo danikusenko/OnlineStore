@@ -6,7 +6,7 @@ const filterPage = `
 	</div>
 	<div class="flex-container-in-filter">
 		<div class="flex-container-in-filter__filter-phones">
-			<form id="filterFormMobileVersion" onsubmit="document.getElementById('filterForm').reset(); initHomePage(); return false;">
+			<form id="filterFormMobileVersion" onsubmit="document.getElementById('filterForm').reset(); return false;">
 				<div class="flex-container-in-filter__filter-block">
 					<span class="flex-container-in-filter__filter-block-option-title">Цена, б.р.</span>
 					<div class="flex-container-in-filter__inputs-to-row">
