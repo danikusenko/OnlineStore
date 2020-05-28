@@ -4,7 +4,7 @@ function setPhoneToList(phone) {
 			inAvailability = '<span name=inStock>В наличии</span>';
 		else
 			inAvailability = '<span name=notAvailable>Нет на складе</span>';
-		let li = '<li><figure><div class="phone-container__phone-element"><div class = "photo"><img class="phonePhoto" src=';
+		let li = '<li data-phone="'+ phone.id + '"><figure><div class="phone-container__phone-element"><div class = "photo"><img class="phonePhoto" src=';
 		li += phone.photo_path + '></div><div class="phone-container__phone-detail"><a name ="phoneName"';
 		li += 'class="phone-container__mobileName" onclick="openDetailPage(' + phone.id + ')">'+ phone.full_name + '</a>';
 		li += '<div class="phone-container__result_attrs"><table><tr><td>Производитель</td><td>' + phone.producer + '</td></tr>';
@@ -60,7 +60,7 @@ function setClickedButtons(){
 	}
 }
 
-function filterPhoneList(){
+function filterPhoneList(phoneList){
 	let fromPrices = document.getElementsByName('fromPrice');
 	let toPrices = document.getElementsByName('toPrice');
 	let fromDiagonals = document.getElementsByName('fromDiagonal');
@@ -71,7 +71,7 @@ function filterPhoneList(){
 	let platformCheckboxes = document.getElementsByName('platform');
 	let RAMCheckboxes = document.getElementsByName('RAM');
 	let builtInMemoryCheckboxes = document.getElementsByName('builtInMemory');
-	let filterList = phoneList;
+	let filterList = phoneList;	
 	for(let words of wordsPhoneName)
 		filterList = words.value.length > 0 ? filterList.filter(phone => phone.full_name.toLowerCase().includes(words.value.toLowerCase())) : filterList;
 	for(let sim of simCardsNumber)
@@ -117,16 +117,17 @@ function getEmptyList(){
 	document.getElementById('phone_list').innerHTML = li;
 }
 
-function initHomePage() {	
+async function initHomePage() {	
 	document.getElementById('phone_list').innerHTML = '';
 	document.body.scrollTop = 0; 
   	document.documentElement.scrollTop = 0;
-	let filterList = filterPhoneList();
+  	let phoneList = await getPhones();
+	let filterList = filterPhoneList(phoneList);
 	if(filterList.length == 0){
 		getEmptyList();
 	}
 	else {
-		for(let phone of filterList){		
+		for(let phone of filterList){
 			setPhoneToList(phone);	
 		}
 		setClickedButtons();

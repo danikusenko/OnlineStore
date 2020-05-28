@@ -10,12 +10,21 @@ const logout = document.getElementById('logout');
 
 function closeForm(){
 	window.location.href = '#';	
-	document.getElementById('goLogin').style.display = "none";
-	document.getElementById('logout').style.display = "block";
 	document.body.style.overflow = "auto";
 }
 
-loginBtn.addEventListener('click', async() => {
+function hideLogin(){
+	document.getElementById('goLogin').style.display = "none";
+	document.getElementById('logout').style.display = "block";
+}
+
+function hideLogout(){
+	document.getElementById('goLogin').style.display = "block";
+	document.getElementById('logout').style.display = "none";
+}
+
+loginBtn.addEventListener('click', async(event) => {
+	event.preventDefault();
 	let email = txtEmail.value;
 	let password = txtPassword.value;
 	try{
@@ -32,7 +41,8 @@ loginBtn.addEventListener('click', async() => {
 
 });
 
-registerBtn.addEventListener('click', async() => {
+registerBtn.addEventListener('click', async(event) => {
+	event.preventDefault();
 	let email = txtEmailForRegistration.value;
 	let password = txtPasswordForRegistration.value;
 	try{
@@ -41,15 +51,12 @@ registerBtn.addEventListener('click', async() => {
 	catch(e){
 		console.log(e.message);
 	}
-	promise.catch(e => console.log(e.message));	
 	await firebase.auth().signInWithEmailAndPassword(email, password);
 	closeForm();	
 });
 
 logout.addEventListener('click', e => {
-	firebase.auth().signOut();
-	document.getElementById('goLogin').style.display = "block";
-	document.getElementById('logout').style.display = "none";
+	firebase.auth().signOut();	
 });
 
 resetBtn.addEventListener('click', e=> {
@@ -61,11 +68,13 @@ resetBtn.addEventListener('click', e=> {
 });
 
 firebase.auth().onAuthStateChanged(firebaseUser => {	
-	if(firebaseUser){				
-		console.log(firebaseUser);
-		document.getElementById('goLogin').style.display = "none";
-		document.getElementById('logout').style.display = "block";
+	if(firebaseUser){			
+		hideLogin();
+		console.log(firebaseUser);		
 	}
-	else
+	else{
+		hideLogout();
 		console.log('user not loged in');
+	}
 });
+
