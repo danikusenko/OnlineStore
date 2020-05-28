@@ -36,9 +36,49 @@
 		font-size: 16px;
 		cursor: pointer;	
 	}
+
+	input[name="searchPhones"] {
+		background-color: #ff8c00;
+		color: #ffffff;
+		border-width: 0px;
+		width: 180px;
+		height: 30px;
+		border-radius: 7px;
+		cursor: pointer;
+	}
+
+	input[name="searchPhones"]:hover {
+		background-color: #d47500;
+	}
+
+	input[name="wordsPhoneName"] {
+		width: 187px;
+		height: 22px;
+		font-size: 15px;
+	}
+
+	input[name="simCards"] {
+		width: 45px;	
+		height: 22px;
+		font-size: 15px;
+	}
+
+	.phone-container__noMobiles{
+		font-size: 20px;
+	}
+
+	.phone-container__reset_button {		
+		height: 30px;
+		width: 150px;		
+		font-size: 15px;						
+	}	
 }
 
 @media screen and (max-device-width: 768px) {
+
+	.phone-container__noMobiles{
+		font-size: 40px;
+	}
 
 	#title {
 		font-size: 40px;
@@ -92,7 +132,34 @@
 		display: flex;
 	  	align-items: center;
 	  	margin-left: 40px;
-	}		
+	}
+
+	.phone-container__reset_button {		
+		height: 60px;
+		width: 260px;		
+		font-size: 30px;						
+	}	
+}
+
+.phone-container__noMobiles{
+	padding: 20px;
+	border: 1px solid #96c6dc;
+	background: rgba(1,117,171,.07);	
+	text-align: justify;
+	display: block;		
+}
+
+.phone-container__reset_button {
+	border: 0px;
+	background-color: #000;
+	color: #fff;
+	margin-left: 35%;
+	margin-top: 3%;	
+	cursor: pointer;					
+}	
+
+.phone-container__reset_button:hover {
+	background-color: #808080;
 }
 
 a {
@@ -236,18 +303,6 @@ input[type=checkbox] {
 	font-size: 15px;
 }
 
-#wordsPhoneName {
-	width: 187px;
-	height: 22px;
-	font-size: 15px;
-}
-
-#simCards {
-	width: 45px;	
-	height: 22px;
-	font-size: 15px;
-}
-
 .phone-container__phone-element {
 	display: flex;
 }
@@ -270,20 +325,6 @@ input[type=checkbox] {
 
 .phone-container__mobileName:hover {
 	color: #dc133c;
-}
-
-#searchPhones {
-	background-color: #ff8c00;
-	color: #ffffff;
-	border-width: 0px;
-	width: 180px;
-	height: 30px;
-	border-radius: 7px;
-	cursor: pointer;
-}
-
-#searchPhones:hover {
-	background-color: #d47500;
 }
 
 .phone-container__result-tools {	

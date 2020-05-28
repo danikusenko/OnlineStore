@@ -4,7 +4,7 @@ function setPhoneToList(phone) {
 			inAvailability = '<span name=inStock>В наличии</span>';
 		else
 			inAvailability = '<span name=notAvailable>Нет на складе</span>';
-		let li = '<li><figure><div class="phone-container__phone-element"><div class = "photo"><img class="phonePhoto" src=';
+		let li = '<li data-phone="'+ phone.id + '"><figure><div class="phone-container__phone-element"><div class = "photo"><img class="phonePhoto" src=';
 		li += phone.photo_path + '></div><div class="phone-container__phone-detail"><a name ="phoneName"';
 		li += 'class="phone-container__mobileName" onclick="openDetailPage(' + phone.id + ')">'+ phone.full_name + '</a>';
 		li += '<div class="phone-container__result_attrs"><table><tr><td>Производитель</td><td>' + phone.producer + '</td></tr>';
@@ -24,11 +24,17 @@ function openDetailPage(phoneId){
 	onNavigate('/phone');		
 }
 
-function addToBasket(phoneId,event){	
+function addToBasket(phoneId,event){
+	let basket_buttons = event.target.closest('li').getElementsByClassName('phone-container__toBasket');
+	if(!phoneId.availability) {
+		for(let btn of basket_buttons){
+			btn.setAttribute("disabled","true");
+			return;
+		}
+	}
 	let count = basket_of_goods.length;		
 	basket_of_goods.push(phoneId);
-	sessionStorage.setItem('basket_goods', JSON.stringify(basket_of_goods));
-	let basket_buttons = event.target.closest('li').getElementsByClassName('phone-container__toBasket');
+	sessionStorage.setItem('basket_goods', JSON.stringify(basket_of_goods));	
 	for(let j = 0; j < basket_buttons.length; j++){	
 		basket_buttons[j].setAttribute("disabled","true");	
 		basket_buttons[j].setAttribute("value", "В корзине");		
@@ -54,10 +60,96 @@ function setClickedButtons(){
 	}
 }
 
-function initHomePage() {	
-	for(let phone of phoneList)		
-		setPhoneToList(phone);	
-	setClickedButtons();
+function filterPhoneList(phoneList){
+	let fromPrices = document.getElementsByName('fromPrice');
+	let toPrices = document.getElementsByName('toPrice');
+	let fromDiagonals = document.getElementsByName('fromDiagonal');
+	let toDiagonals = document.getElementsByName('toDiagonal');
+	let wordsPhoneName = document.getElementsByName('wordsPhoneName')
+	let simCardsNumber = document.getElementsByName('simCards');
+	let producerCheckboxes = document.getElementsByName('producer');
+	let platformCheckboxes = document.getElementsByName('platform');
+	let RAMCheckboxes = document.getElementsByName('RAM');
+	let builtInMemoryCheckboxes = document.getElementsByName('builtInMemory');
+	let filterList = phoneList;	
+	for(let words of wordsPhoneName)
+		filterList = words.value.length > 0 ? filterList.filter(phone => phone.full_name.toLowerCase().includes(words.value.toLowerCase())) : filterList;
+	for(let sim of simCardsNumber)
+		filterList = sim.value.length > 0 ? filterList.filter(phone => phone.sim_cards_number == sim.value): filterList;
+	for(let fromPrice of fromPrices)
+		filterList = fromPrice.value.length > 0 ? filterList.filter(phone => phone.price >= fromPrice.value): filterList;
+	for(let toPrice of toPrices)
+		filterList = toPrice.value.length > 0 ? filterList.filter(phone => phone.price <= toPrice.value): filterList;
+	for(let fromDiagonal of fromDiagonals)
+		filterList = fromDiagonal.value.length > 0 ? filterList.filter(phone => phone.screen_diagonal >= fromDiagonal.value): filterList;
+	for(let toDiagonal of toDiagonals)
+		filterList = toDiagonal.value.length > 0 ? filterList.filter(phone => phone.screen_diagonal <= toDiagonal.value): filterList;	
+	let producers = [];	
+	for(let producer of producerCheckboxes){
+		if(producer.checked)
+			producers.push(producer.getAttribute('value'));
+	}
+	filterList = producers.length > 0 ? filterList.filter(phone => producers.includes(phone.producer.trim())): filterList;
+	let platforms = [];
+	for(let platform of platformCheckboxes){
+		if(platform.checked)
+			platforms.push(platform.getAttribute('value'));
+	}	
+	filterList = platforms.length > 0 ? filterList.filter(phone => platforms.includes(phone.platform.trim())): filterList;
+	let rams = [];
+	for(let ram of RAMCheckboxes){
+		if(ram.checked)
+			rams.push(ram.getAttribute('value'));
+	}
+	filterList = rams.length > 0 ? filterList.filter(phone => rams.includes(phone.RAM.toString())): filterList;
+	let internalsMemory = [];
+	for(let memory of builtInMemoryCheckboxes){
+		if(memory.checked)
+			internalsMemory.push(memory.getAttribute('value'));
+	}	
+	filterList = internalsMemory.length > 0 ? filterList.filter(phone => internalsMemory.includes(phone.internal_memory.toString())): filterList;
+	return filterList;
 }
+
+function getEmptyList(){	
+	let li = '<div class="phone-container__noMobiles"><span>К сожалению, мы не нашли мобильные телефоны по указанным параметрам</span><br>';
+	li += '<input type="button" class="phone-container__reset_button" onclick="resetForms()" value="Сбросить фильтр"></div>';
+	document.getElementById('phone_list').innerHTML = li;
+}
+
+async function initHomePage() {	
+	document.getElementById('phone_list').innerHTML = '';
+	document.body.scrollTop = 0; 
+  	document.documentElement.scrollTop = 0;
+  	let phoneList = await getPhones();
+	let filterList = filterPhoneList(phoneList);
+	if(filterList.length == 0){
+		getEmptyList();
+	}
+	else {
+		for(let phone of filterList){
+			setPhoneToList(phone);	
+		}
+		setClickedButtons();
+	}
+}
+
+function resetForms(){
+	let filterFormMobileVersion = document.getElementById('filterFormMobileVersion');
+	if(filterFormMobileVersion != null)
+		filterFormMobileVersion.reset();
+	let filterForm = document.getElementById('filterForm');
+	filterForm.reset();	
+	initHomePage();
+}
+
+document.getElementById('filterForm').addEventListener('submit', function(e){
+	e.preventDefault();	
+	let filterFormMobileVersion = document.getElementById('filterFormMobileVersion');
+	if(filterFormMobileVersion != null)
+		filterFormMobileVersion.reset();
+	initHomePage();
+	return false;
+});
 
 initHomePage();

@@ -46,11 +46,13 @@ function viewPhone(){
 	setProperty('phone-container-in-description__light-sensor',phone.light_sensor);
 	setProperty('phone-container-in-description__proximity-sensor',phone.proximity_sensor);
 	setCharactersitiscsForMobileVersion();
-	let basket_button = document.getElementById('toBasket');	
-	if(isInBaket(phone.id)){
+	let basket_button = document.getElementById('toBasket');
+	if(!phone.availability)
+		basket_button.setAttribute("disabled","true");	
+	else if(isInBaket(phone.id)){
 		setClickedButton(basket_button);		
 	}
-	else {
+	else if(!isInBaket(phone.id)) {
 		basket_button.addEventListener('click',function(){			 			
 			basket_of_goods.push(phone);			
 			sessionStorage.setItem("buttons-"+ (basket_of_goods.length-1),"toBasket-"+ phone.id);

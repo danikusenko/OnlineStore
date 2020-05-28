@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-
 @media screen and (max-device-width: 768px) {
 	#body{
 		background-color: #dcdcdc;		
-		font-family: 'Roboto', sans-serif;
-		font-size: 40px;
-		margin: -8px;		
+		font-size: 40px;				
 	}
 	h1 {
 		font-size: 40px;
@@ -108,7 +104,7 @@
 	  transform: rotate(45deg);  
 	}
 
-	#searchPhones {
+	input[name="searchPhones"] {
 		background-color: #ff8c00;
 		color: #ffffff;
 		border-width: 0px;
@@ -119,6 +115,10 @@
 		position: fixed;
 		bottom: 0px;	
 	}	
+
+	input[name="simCards"] {
+		width: 10%;		
+	}
 
 	:focus {
   		outline: 0;  		 		
